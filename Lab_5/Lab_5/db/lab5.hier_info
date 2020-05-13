@@ -1,0 +1,526 @@
+|sec_counter
+EN => my_counter:COUNTER.EN
+clk1Khz => my_counter:COUNTER.clk
+clk1Khz => counter_w_process:TIMER.clk
+clear_in => counter_w_process:TIMER.clear
+Q[0] <= counter_w_process:TIMER.Q[0]
+Q[1] <= counter_w_process:TIMER.Q[1]
+Q[2] <= counter_w_process:TIMER.Q[2]
+Q[3] <= counter_w_process:TIMER.Q[3]
+Q[4] <= counter_w_process:TIMER.Q[4]
+Q[5] <= counter_w_process:TIMER.Q[5]
+Q[6] <= counter_w_process:TIMER.Q[6]
+Q[7] <= counter_w_process:TIMER.Q[7]
+Q[8] <= counter_w_process:TIMER.Q[8]
+Q[9] <= counter_w_process:TIMER.Q[9]
+Q[10] <= counter_w_process:TIMER.Q[10]
+Q[11] <= counter_w_process:TIMER.Q[11]
+Q[12] <= counter_w_process:TIMER.Q[12]
+Q[13] <= counter_w_process:TIMER.Q[13]
+Q[14] <= counter_w_process:TIMER.Q[14]
+Q[15] <= counter_w_process:TIMER.Q[15]
+
+
+|sec_counter|my_counter:COUNTER
+EN => my_TFF:TFF_Q00.T
+EN => my_TFF:TFF_Q00.EN
+EN => my_TFF:TFF_Q01.EN
+EN => my_TFF:TFF_Q02.EN
+EN => my_TFF:TFF_Q03.EN
+EN => my_TFF:TFF_Q04.EN
+EN => my_TFF:TFF_Q05.EN
+EN => my_TFF:TFF_Q06.EN
+EN => my_TFF:TFF_Q07.EN
+EN => my_TFF:TFF_Q08.EN
+EN => my_TFF:TFF_Q09.EN
+EN => my_TFF:TFF_Q10.EN
+EN => my_TFF:TFF_Q11.EN
+EN => my_TFF:TFF_Q12.EN
+EN => my_TFF:TFF_Q13.EN
+EN => my_TFF:TFF_Q14.EN
+EN => my_TFF:TFF_Q15.EN
+clk => my_TFF:TFF_Q00.clk
+clk => my_TFF:TFF_Q01.clk
+clk => my_TFF:TFF_Q02.clk
+clk => my_TFF:TFF_Q03.clk
+clk => my_TFF:TFF_Q04.clk
+clk => my_TFF:TFF_Q05.clk
+clk => my_TFF:TFF_Q06.clk
+clk => my_TFF:TFF_Q07.clk
+clk => my_TFF:TFF_Q08.clk
+clk => my_TFF:TFF_Q09.clk
+clk => my_TFF:TFF_Q10.clk
+clk => my_TFF:TFF_Q11.clk
+clk => my_TFF:TFF_Q12.clk
+clk => my_TFF:TFF_Q13.clk
+clk => my_TFF:TFF_Q14.clk
+clk => my_TFF:TFF_Q15.clk
+clear => my_TFF:TFF_Q00.clear_in
+clear => my_TFF:TFF_Q01.clear_in
+clear => my_TFF:TFF_Q02.clear_in
+clear => my_TFF:TFF_Q03.clear_in
+clear => my_TFF:TFF_Q04.clear_in
+clear => my_TFF:TFF_Q05.clear_in
+clear => my_TFF:TFF_Q06.clear_in
+clear => my_TFF:TFF_Q07.clear_in
+clear => my_TFF:TFF_Q08.clear_in
+clear => my_TFF:TFF_Q09.clear_in
+clear => my_TFF:TFF_Q10.clear_in
+clear => my_TFF:TFF_Q11.clear_in
+clear => my_TFF:TFF_Q12.clear_in
+clear => my_TFF:TFF_Q13.clear_in
+clear => my_TFF:TFF_Q14.clear_in
+clear => my_TFF:TFF_Q15.clear_in
+count[0] <= my_TFF:TFF_Q00.Q
+count[1] <= my_TFF:TFF_Q01.Q
+count[2] <= my_TFF:TFF_Q02.Q
+count[3] <= my_TFF:TFF_Q03.Q
+count[4] <= my_TFF:TFF_Q04.Q
+count[5] <= my_TFF:TFF_Q05.Q
+count[6] <= my_TFF:TFF_Q06.Q
+count[7] <= my_TFF:TFF_Q07.Q
+count[8] <= my_TFF:TFF_Q08.Q
+count[9] <= my_TFF:TFF_Q09.Q
+count[10] <= my_TFF:TFF_Q10.Q
+count[11] <= my_TFF:TFF_Q11.Q
+count[12] <= my_TFF:TFF_Q12.Q
+count[13] <= my_TFF:TFF_Q13.Q
+count[14] <= my_TFF:TFF_Q14.Q
+count[15] <= my_TFF:TFF_Q15.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q00
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q00|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q01
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q01|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q02
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q02|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q03
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q03|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q04
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q04|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q05
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q05|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q06
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q06|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q07
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q07|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q08
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q08|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q09
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q09|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q10
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q10|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q11
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q11|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q12
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q12|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q13
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q13|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q14
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q14|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q15
+T => D_temp.IN1
+T => D_temp.IN1
+EN => DFF_w_clear:DFF1.EN
+clk => DFF_w_clear:DFF1.clk
+clear_in => DFF_w_clear:DFF1.async_clear
+Q <= DFF_w_clear:DFF1.Q
+nQ <= DFF_w_clear:DFF1.Q
+
+
+|sec_counter|my_counter:COUNTER|my_TFF:TFF_Q15|DFF_w_clear:DFF1
+D => nQ.DATAB
+D => Q~reg0.DATAIN
+async_clear => Q~reg0.ACLR
+async_clear => nQ~reg0.ENA
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+EN => nQ.OUTPUTSELECT
+EN => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sec_counter|counter_w_process:TIMER
+EN => temp_q[0].ENA
+EN => temp_q[1].ENA
+EN => temp_q[2].ENA
+EN => temp_q[3].ENA
+EN => temp_q[4].ENA
+EN => temp_q[5].ENA
+EN => temp_q[6].ENA
+EN => temp_q[7].ENA
+EN => temp_q[8].ENA
+EN => temp_q[9].ENA
+EN => temp_q[10].ENA
+EN => temp_q[11].ENA
+EN => temp_q[12].ENA
+EN => temp_q[13].ENA
+EN => temp_q[14].ENA
+EN => temp_q[15].ENA
+clk => temp_q[0].CLK
+clk => temp_q[1].CLK
+clk => temp_q[2].CLK
+clk => temp_q[3].CLK
+clk => temp_q[4].CLK
+clk => temp_q[5].CLK
+clk => temp_q[6].CLK
+clk => temp_q[7].CLK
+clk => temp_q[8].CLK
+clk => temp_q[9].CLK
+clk => temp_q[10].CLK
+clk => temp_q[11].CLK
+clk => temp_q[12].CLK
+clk => temp_q[13].CLK
+clk => temp_q[14].CLK
+clk => temp_q[15].CLK
+clear => temp_q[0].ACLR
+clear => temp_q[1].ACLR
+clear => temp_q[2].ACLR
+clear => temp_q[3].ACLR
+clear => temp_q[4].ACLR
+clear => temp_q[5].ACLR
+clear => temp_q[6].ACLR
+clear => temp_q[7].ACLR
+clear => temp_q[8].ACLR
+clear => temp_q[9].ACLR
+clear => temp_q[10].ACLR
+clear => temp_q[11].ACLR
+clear => temp_q[12].ACLR
+clear => temp_q[13].ACLR
+clear => temp_q[14].ACLR
+clear => temp_q[15].ACLR
+Q[0] <= temp_q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= temp_q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= temp_q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= temp_q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= temp_q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= temp_q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= temp_q[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= temp_q[7].DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= temp_q[8].DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= temp_q[9].DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= temp_q[10].DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= temp_q[11].DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= temp_q[12].DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= temp_q[13].DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= temp_q[14].DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= temp_q[15].DB_MAX_OUTPUT_PORT_TYPE
+
+

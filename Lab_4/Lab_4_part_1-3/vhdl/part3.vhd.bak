@@ -1,0 +1,17 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY part3 IS
+PORT ( 
+			Clk, D : IN STD_LOGIC;
+			Q, Qnot : OUT STD_LOGIC
+		);
+END part3;
+
+ARCHITECTURE Structural OF part3 IS
+
+	-- You will need a component part 2, and some intermediate signals
+BEGIN
+
+	-- You will need to instantiate a few instances of part 2, and perhaps assign some intermediate signals
+END Structural;

@@ -1,0 +1,134 @@
+# Reading D:/intelFPGA/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do pre_lab_5_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/intelFPGA/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_5/Pre_lab/Pre_Lab_5/vhdl/DFF_w_clear.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:23:14 on Apr 30,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_5/Pre_lab/Pre_Lab_5/vhdl/DFF_w_clear.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity DFF_w_clear
+# -- Compiling architecture Behavioral of DFF_w_clear
+# End time: 12:23:14 on Apr 30,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_5/Pre_lab/Pre_Lab_5/vhdl/my_TFF.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:23:14 on Apr 30,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_5/Pre_lab/Pre_Lab_5/vhdl/my_TFF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity my_TFF
+# -- Compiling architecture behavior of my_TFF
+# End time: 12:23:14 on Apr 30,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_5/Pre_lab/Pre_Lab_5/vhdl/testbench_counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:23:14 on Apr 30,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_5/Pre_lab/Pre_Lab_5/vhdl/testbench_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity testbench_counter
+# -- Compiling architecture behavior of testbench_counter
+# End time: 12:23:14 on Apr 30,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_5/Pre_lab/Pre_Lab_5/vhdl/DFF_w_clear.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:23:14 on Apr 30,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_5/Pre_lab/Pre_Lab_5/vhdl/DFF_w_clear.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity DFF_w_clear
+# -- Compiling architecture Behavioral of DFF_w_clear
+# End time: 12:23:14 on Apr 30,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_5/Pre_lab/Pre_Lab_5/vhdl/my_TFF.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:23:14 on Apr 30,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_5/Pre_lab/Pre_Lab_5/vhdl/my_TFF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity my_TFF
+# -- Compiling architecture behavior of my_TFF
+# End time: 12:23:15 on Apr 30,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_5/Pre_lab/Pre_Lab_5/vhdl/my_counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:23:15 on Apr 30,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_5/Pre_lab/Pre_Lab_5/vhdl/my_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity my_counter
+# -- Compiling architecture behavior of my_counter
+# End time: 12:23:15 on Apr 30,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_counter
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench_counter 
+# Start time: 12:23:15 on Apr 30,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.testbench_counter(behavior)
+# Loading work.my_counter(behavior)
+# Loading work.my_tff(behavior)
+# Loading work.dff_w_clear(behavioral)
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: atlas  Hostname: ATLAS-PC  ProcessID: 20936
+#           Attempting to use alternate WLF file "./wlft5mhsh6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5mhsh6
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1 us
+run 5us
+run 10us
+add wave -position end  sim:/testbench_counter/uut/TFF_Q00/Q
+add wave -position end  sim:/testbench_counter/uut/TFF_Q01/Q
+add wave -position end  sim:/testbench_counter/uut/TFF_Q02/Q
+add wave -position end  sim:/testbench_counter/uut/TFF_Q03/Q
+add wave -position end  sim:/testbench_counter/uut/TFF_Q04/Q
+add wave -position end  sim:/testbench_counter/uut/TFF_Q05/Q
+add wave -position end  sim:/testbench_counter/uut/TFF_Q06/Q
+add wave -position end  sim:/testbench_counter/uut/TFF_Q07/Q
+add wave -position end  sim:/testbench_counter/uut/TFF_Q08/Q
+add wave -position end  sim:/testbench_counter/uut/TFF_Q09/Q
+add wave -position end  sim:/testbench_counter/uut/TFF_Q10/Q
+restart
+run 5us
+add wave -r /*
+# End time: 12:29:33 on Apr 30,2020, Elapsed time: 0:06:18
+# Errors: 0, Warnings: 2

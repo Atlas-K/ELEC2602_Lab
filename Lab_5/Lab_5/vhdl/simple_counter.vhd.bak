@@ -1,0 +1,30 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.all;
+use ieee.std_logic_signed.all;
+library STD;
+use STD.textio.all;  
+
+-- entity declaration for your testbench.Dont declare any ports here
+ENTITY simple_counter IS 
+		PORT ( 	
+			T : in std_logic; 
+			clk : in std_logic;
+			clear_in : in std_logic;
+			Q : out std_logic
+				);
+END simple_counter;
+
+ARCHITECTURE behavior OF simple_counter IS
+	signal D, Q_temp: STD_LOGIC;
+BEGIN
+	PROCESS (clk, R)
+	BEGIN
+		IF R = '1' THEN
+			Q <= (others => '0');
+		ELSIF (clk'event AND clk='1' AND enable = '1') THEN
+			Q <= Q + 1;
+		END IF;
+		count <= Q;
+	END PROCESS;
+END behavior;

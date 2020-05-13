@@ -1,0 +1,182 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/atlas/Desktop/ELEC2602/Lab/Lab_6/simulation/modelsim
+Enext_state
+Z1 w1588822711
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_6/vhdl/next_state.vhd
+Z7 FC:/Users/atlas/Desktop/ELEC2602/Lab/Lab_6/vhdl/next_state.vhd
+l0
+L7
+VG9dnb?Z41M^mE_USE48b?1
+!s100 16[;QYZf8OO@Z6G9]FHz^1
+Z8 OV;C;10.5b;63
+31
+Z9 !s110 1588823950
+!i10b 1
+Z10 !s108 1588823950.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_6/vhdl/next_state.vhd|
+Z12 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_6/vhdl/next_state.vhd|
+!i113 1
+Z13 o-93 -work work
+Z14 tExplicit 1 CvgOpt 0
+Abehavioural
+R2
+R3
+R4
+R5
+DEx4 work 10 next_state 0 22 G9dnb?Z41M^mE_USE48b?1
+l14
+L13
+VUYNPKN]:<kb?@5Y7`;VH91
+!s100 ]7aTj=9V:Chd;OYScOHlV0
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Eoutputsig
+R1
+R2
+R3
+R4
+R5
+R0
+R6
+R7
+l0
+L68
+V8cH?z9>Q;^9NVcF;mQ^a]0
+!s100 WPN=Sa1@XV2:P=K:93:>m2
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Abehavioural
+R2
+R3
+R4
+R5
+DEx4 work 9 outputsig 0 22 8cH?z9>Q;^9NVcF;mQ^a]0
+l76
+L74
+VXEE9<=YZa]UF;L5j57:N;0
+!s100 FXXQ?=eMMRB[f_2Y=WS9c3
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Eseq_detect
+Z15 w1588822806
+R2
+R3
+R4
+R5
+R0
+Z16 8C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_6/vhdl/seq_detect.vhd
+Z17 FC:/Users/atlas/Desktop/ELEC2602/Lab/Lab_6/vhdl/seq_detect.vhd
+l0
+L8
+V7oR3N7SZ3QBa;MeI^84em2
+!s100 i3HNkPnDnPF=k3i7SUZPA0
+R8
+31
+R9
+!i10b 1
+R10
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_6/vhdl/seq_detect.vhd|
+Z19 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_6/vhdl/seq_detect.vhd|
+!i113 1
+R13
+R14
+Abehavioural
+R2
+R3
+R4
+R5
+Z20 DEx4 work 10 seq_detect 0 22 7oR3N7SZ3QBa;MeI^84em2
+l32
+L15
+Z21 VI7e:Dbn_84<:>iQWoE^K71
+Z22 !s100 @fD0giPEbEX>e`XhzVgh^0
+R8
+31
+R9
+!i10b 1
+R10
+R18
+R19
+!i113 1
+R13
+R14
+Etestbench_lab6p1
+Z23 w1588823930
+R2
+R3
+R4
+R5
+R0
+Z24 8C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_6/vhdl/testbench_lab6p1.vhd
+Z25 FC:/Users/atlas/Desktop/ELEC2602/Lab/Lab_6/vhdl/testbench_lab6p1.vhd
+l0
+L8
+Vb62efjb;8S<EeZY86gGd]2
+!s100 _2eW_enTY@oQF1?kMoJ]40
+R8
+31
+R9
+!i10b 1
+R10
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_6/vhdl/testbench_lab6p1.vhd|
+Z27 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_6/vhdl/testbench_lab6p1.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 16 testbench_lab6p1 0 22 b62efjb;8S<EeZY86gGd]2
+l32
+L11
+V6aCS<8ePQM;O3IBI6LnNQ3
+!s100 JK2HbHeFA]zlCIkLd[=_U1
+R8
+31
+R9
+!i10b 1
+R10
+R26
+R27
+!i113 1
+R13
+R14

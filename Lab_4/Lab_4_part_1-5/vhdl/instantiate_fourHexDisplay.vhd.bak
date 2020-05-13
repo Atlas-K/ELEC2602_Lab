@@ -1,0 +1,45 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY instantiate_fourHexDisplay IS
+PORT ( 	SW : IN std_logic_vector(9 downto 0);
+			LEDR: OUT std_logic_vector(9 downto 0)
+			);
+END instantiate_fourHexDisplay ;
+
+ARCHITECTURE behaviour OF instantiate_fourHexDisplay IS
+
+   -- Component Declaration that you are instantiating
+    COMPONENT light  
+    PORT( 
+         x1 : IN  std_logic;
+         x2 : IN  std_logic;
+			f  : OUT  std_logic
+        );
+    END COMPONENT;
+	
+	signal light_output  :  std_logic;
+	
+BEGIN
+
+   uut: light PORT MAP (
+          x1 => SW(1),
+          x2 => SW(0),
+          f => light_output
+        ); 
+
+	 -- Assign each individual Red LED to have the same value as 
+	 -- the output from your light module
+	 
+	 LEDR(0) <= light_output; 
+	 LEDR(1) <= light_output;
+	 LEDR(2) <= light_output;
+	 LEDR(3) <= light_output;
+	 LEDR(4) <= light_output; 
+	 LEDR(5) <= light_output;
+	 LEDR(6) <= light_output;
+	 LEDR(7) <= light_output;	
+	 LEDR(8) <= light_output;	
+	 LEDR(9) <= light_output;	  
+		  
+END behaviour;

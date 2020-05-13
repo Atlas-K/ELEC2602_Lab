@@ -1,0 +1,29 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.all;
+library STD;
+use STD.textio.all;  
+
+-- entity declaration for your testbench.Dont declare any ports here
+ENTITY counter_w_process IS 
+		PORT (
+			EN: IN STD_LOGIC;
+			clk : in std_logic;
+			clear : in std_logic;
+			Q : out std_logic_VECTOR(15 downto 0)
+				);
+END counter_w_process;
+
+ARCHITECTURE behavior OF counter_w_process IS
+	SIGNAL temp_q: std_logic_VECTOR(15 downto 0);
+BEGIN
+	PROCESS (clk, clear)
+	BEGIN
+		IF clear = '1' THEN
+			temp_q <= (others => '0');
+		ELSIF (clk'event AND clk='1' AND EN = '1') THEN
+			temp_q <= temp_q + 1;
+		END IF;
+		Q <= temp_q;
+	END PROCESS;
+END behavior;

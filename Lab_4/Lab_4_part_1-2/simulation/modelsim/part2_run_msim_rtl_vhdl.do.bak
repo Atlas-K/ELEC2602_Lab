@@ -1,0 +1,20 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/atlas/Downloads/Lab 4 part 1/Lab_4_part_1-2/vhdl/part2.vhd}
+vcom -93 -work work {C:/Users/atlas/Downloads/Lab 4 part 1/Lab_4_part_1-2/vhdl/part1.vhd}
+
+vcom -93 -work work {C:/Users/atlas/Downloads/Lab 4 part 1/Lab_4_part_1-2/vhdl/testbench_part2.vhd}
+vcom -93 -work work {C:/Users/atlas/Downloads/Lab 4 part 1/Lab_4_part_1-2/vhdl/part1.vhd}
+vcom -93 -work work {C:/Users/atlas/Downloads/Lab 4 part 1/Lab_4_part_1-2/vhdl/part2.vhd}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_part2
+
+add wave *
+view structure
+view signals
+run 800 ns

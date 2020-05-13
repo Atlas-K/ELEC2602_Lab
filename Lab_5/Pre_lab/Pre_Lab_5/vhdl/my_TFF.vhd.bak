@@ -1,0 +1,27 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.all;
+library STD;
+use STD.textio.all;  
+
+-- entity declaration for your testbench.Dont declare any ports here
+ENTITY my_TFF IS 
+		PORT ( 	
+			T : in std_logic; 
+			clk : in std_logic;
+			clear_in : in std_logic;
+			Q : out std_logic
+				);
+END my_TFF;
+
+ARCHITECTURE behavior OF my_TFF IS
+
+   -- Signals that you may want to use
+	signal D, Q_temp: STD_LOGIC;
+	
+BEGIN
+	
+
+
+  
+END;

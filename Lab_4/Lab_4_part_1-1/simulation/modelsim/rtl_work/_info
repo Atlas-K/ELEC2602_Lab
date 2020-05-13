@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/atlas/Downloads/Lab 4 part 1/Lab_4_part_1-1/simulation/modelsim
+Epart1
+Z1 w1523588340
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/atlas/Downloads/Lab 4 part 1/Lab_4_part_1-1/vhdl/part1.vhd
+Z5 FC:/Users/atlas/Downloads/Lab 4 part 1/Lab_4_part_1-1/vhdl/part1.vhd
+l0
+L4
+VFgKPeC_5O9U2A[e=LeSl^3
+!s100 Cc8WDcFb2VjohZZnRDC?43
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1586969146
+!i10b 1
+Z8 !s108 1586969146.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Downloads/Lab 4 part 1/Lab_4_part_1-1/vhdl/part1.vhd|
+Z10 !s107 C:/Users/atlas/Downloads/Lab 4 part 1/Lab_4_part_1-1/vhdl/part1.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Astructural
+R2
+R3
+Z13 DEx4 work 5 part1 0 22 FgKPeC_5O9U2A[e=LeSl^3
+l17
+L11
+Z14 VRU@OUSSmAX[CbUIb=>Ya90
+Z15 !s100 l^NSbC<U]ohajgHfNNV0I2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etestbench_part1
+Z16 w1523600540
+Z17 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z18 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R2
+R3
+R0
+Z19 8C:/Users/atlas/Downloads/Lab 4 part 1/Lab_4_part_1-1/vhdl/testbench_part1.vhd
+Z20 FC:/Users/atlas/Downloads/Lab 4 part 1/Lab_4_part_1-1/vhdl/testbench_part1.vhd
+l0
+L8
+VaeMI1T>IGnfJQf<R=Qc=Z2
+!s100 4<I[2E;h`mfn9dCKfJE]i3
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Downloads/Lab 4 part 1/Lab_4_part_1-1/vhdl/testbench_part1.vhd|
+Z22 !s107 C:/Users/atlas/Downloads/Lab 4 part 1/Lab_4_part_1-1/vhdl/testbench_part1.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R17
+R18
+R2
+R3
+DEx4 work 15 testbench_part1 0 22 aeMI1T>IGnfJQf<R=Qc=Z2
+l24
+L11
+VzO@J7]RBXW@DK<NXfn_XV1
+!s100 Fb^fLBiGTbR3HiR2F_idT3
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12

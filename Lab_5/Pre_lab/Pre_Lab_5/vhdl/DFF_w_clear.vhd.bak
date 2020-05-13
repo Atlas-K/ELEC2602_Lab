@@ -1,0 +1,25 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.all;
+library STD;
+use STD.textio.all;  
+
+ENTITY DFF IS 
+		PORT ( 	
+			D, clk: IN STD_LOGIC;
+			Q, nQ: OUT STD_LOGIC
+				);
+END DFF;
+
+ARCHITECTURE Behavioral OF DFF IS
+
+BEGIN
+	PROCESS (clk)
+	BEGIN
+		IF rising_edge(clk) THEN
+			Q <= D;
+			nQ <= not(D);
+		END IF;
+	END PROCESS;
+	
+END Behavioral;

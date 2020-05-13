@@ -1,0 +1,170 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/simulation/modelsim
+Edff_neg
+Z1 w1491547252
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/DFF_neg.vhd
+Z5 FC:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/DFF_neg.vhd
+l0
+L4
+VKcDMAB0YhBg1MHPL;^13F3
+!s100 zkCeSkHCh:ih[hoDkF`Cj2
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1587611007
+!i10b 1
+Z8 !s108 1587611007.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/DFF_neg.vhd|
+Z10 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/DFF_neg.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehavior
+R2
+R3
+DEx4 work 7 dff_neg 0 22 KcDMAB0YhBg1MHPL;^13F3
+l13
+L11
+VJ;mI=0djYLmV<afJL2clg3
+!s100 2:zDBRM81?5KR`CIA_>oH1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edff_pos
+Z13 w1491547256
+R2
+R3
+R0
+Z14 8C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/DFF_pos.vhd
+Z15 FC:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/DFF_pos.vhd
+l0
+L4
+V?QlW7:76mJ?]3=ABY?RbK1
+!s100 mU94@Go4nEcdc?>jYIij60
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/DFF_pos.vhd|
+Z17 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/DFF_pos.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 7 dff_pos 0 22 ?QlW7:76mJ?]3=ABY?RbK1
+l13
+L11
+V@6jbI1DXVRjOQL>Vo5?TX2
+!s100 amg38;M7gdNWhS35bII@o0
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Emy_latch
+Z18 w1491547062
+R2
+R3
+R0
+Z19 8C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/my_latch.vhd
+Z20 FC:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/my_latch.vhd
+l0
+L4
+VA]TdAcj]g<>DNP;8h>9^?2
+!s100 4L:gFX`GFknbaMFiHc5?@2
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/my_latch.vhd|
+Z22 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/my_latch.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+Z23 DEx4 work 8 my_latch 0 22 A]TdAcj]g<>DNP;8h>9^?2
+l13
+L11
+Z24 VZK2kK_39]4@BU]4VK:o5F2
+Z25 !s100 KER93CgJ9O2N>aHcAYgW`0
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12
+Etestbench_part4
+Z26 w1491550952
+Z27 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z28 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R2
+R3
+R0
+Z29 8C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/testbench_part4.vhd
+Z30 FC:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/testbench_part4.vhd
+l0
+L8
+VPb6X[T;m6:IlRefbQYdgW0
+!s100 Vb16@CdA@1CWVFdnn>`LE3
+R6
+31
+R7
+!i10b 1
+R8
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/testbench_part4.vhd|
+Z32 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Lab_4/Lab_4_part_1-4/vhdl/testbench_part4.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R27
+R28
+R2
+R3
+DEx4 work 15 testbench_part4 0 22 Pb6X[T;m6:IlRefbQYdgW0
+l37
+L11
+VE;hIMnYz]fI]=kllXVj`^1
+!s100 ZEmSEB7fZCJSNTa3TlQLP3
+R6
+31
+R7
+!i10b 1
+R8
+R31
+R32
+!i113 1
+R11
+R12

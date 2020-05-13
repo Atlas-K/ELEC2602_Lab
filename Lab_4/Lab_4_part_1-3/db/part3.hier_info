@@ -1,0 +1,42 @@
+|part3
+Clk => part2:SR_slave.Clk
+Clk => part2:SR_master.Clk
+D => part2:SR_master.D
+Q << part2:SR_slave.Q
+Qnot << part2:SR_slave.Qnot
+
+
+|part3|part2:SR_master
+Clk => part1:SR1.Clk
+D => part1:SR1.S
+D => part1:SR1.R
+Q <= part1:SR1.Q
+Qnot <= part1:SR1.Qnot
+
+
+|part3|part2:SR_master|part1:SR1
+Clk => R_g.IN0
+Clk => S_g.IN0
+R => R_g.IN1
+S => S_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|part2:SR_slave
+Clk => part1:SR1.Clk
+D => part1:SR1.S
+D => part1:SR1.R
+Q <= part1:SR1.Q
+Qnot <= part1:SR1.Qnot
+
+
+|part3|part2:SR_slave|part1:SR1
+Clk => R_g.IN0
+Clk => S_g.IN0
+R => R_g.IN1
+S => S_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
