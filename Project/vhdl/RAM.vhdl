@@ -12,7 +12,7 @@ entity RAM is
 	r_addr: in std_logic_vector(ADDR_SIZE - 1 downto 0);
 	data_in: in std_logic_vector(DATA_SIZE - 1 downto 0);
 	clk: in std_logic;
-	data_outL out std_logic_vector(DATA_SIZE - 1 downto 0);
+	data_out out std_logic_vector(DATA_SIZE - 1 downto 0);
 	);
 	
 end;
