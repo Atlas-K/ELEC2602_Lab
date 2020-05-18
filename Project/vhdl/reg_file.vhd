@@ -31,7 +31,7 @@ entity reg_file is
            DATA_SIZE: integer := 16; -- 16 bit data
            );
    
-   port(clk: in std_logic;
+    port(clk: in std_logic;
         reg0sel: in std_logic_vector(ADDR_SIZE - 1 downto 0); -- 2bit address
         reg1sel: in std_logic_vector(ADDR_SIZE - 1 downto 0); -- 2bit address
         mode: in std_logic;                                   -- 0/1
