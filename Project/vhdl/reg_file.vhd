@@ -52,20 +52,20 @@ architecture Behavior of reg_file is
 	begin
 		if clk = '1' and clk'event then
 			internal: if mode = '0' then
-						write_reg := conv_unsigned(reg0sel);
-						read_reg := conv_unsigned(reg1sel);
-						reg_bus(write_reg) <= reg_bus(read_reg);
-						output <= ('others' => 'Z');
+					write_reg := conv_unsigned(reg0sel);
+					read_reg := conv_unsigned(reg1sel);
+					reg_bus(write_reg) <= reg_bus(read_reg);
+					output <= ('others' => 'Z');
 		external_in: elsif mode = '1' then
-							if rw_mode = '0' then
-							write_reg := conv_unsigned(reg0sel);
-							reg_bus(write_reg) <= input;
-							output <= ('others' => 'Z');
+					if rw_mode = '0' then
+						write_reg := conv_unsigned(reg0sel);
+						reg_bus(write_reg) <= input;
+						output <= ('others' => 'Z');
 	    external_out: elsif rw_mode = '1' then
-							read_reg := conv_unsigned(reg0sel);
-							output <= reg_bus(read_reg);
-						end if;
+						read_reg := conv_unsigned(reg0sel);
+						output <= reg_bus(read_reg);
 					end if;
+				end if;
 		end if;
 	end process;
 end reg_file;
