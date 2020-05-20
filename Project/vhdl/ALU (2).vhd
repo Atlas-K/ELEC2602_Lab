@@ -7,7 +7,7 @@ ENTITY ALU IS
 	GENERIC ( N : INTEGER := 4 );
 PORT ( 
 					A, B												: IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
-					clk, AddXor, o_in, o_out, Ain, reset	            	: IN STD_LOGIC;
+					clk, AddXor, o_in, o_out, Ain, reset	            : IN STD_LOGIC;
 					G													: OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0)
 		);
 
