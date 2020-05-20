@@ -27,9 +27,9 @@ END COMPONENT;
 COMPONENT Reg IS
 		PORT ( 
 			input 							: IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
-			Rin, Rout, reset, clk		: IN STD_LOGIC;
+			Rin, Rout, reset, clk		    : IN STD_LOGIC;
 			output, data 					: OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0)
-				);
+			);
 				
 END COMPONENT;
 
@@ -39,10 +39,10 @@ SIGNAL A_t: STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 BEGIN 
 
 	A1: fourbitReg PORT MAP (
-			clk => clk,
-			reset => reset,
+			clk    => clk,
+			reset  => reset,
 			enable => Ain,
-			input => A,
+			input  => A,
 			output => A_t
 		);
 		
@@ -59,11 +59,11 @@ BEGIN
 
 	Reg1 : Reg PORT MAP (
 			input 				=>  	G_t,
-			Rin					=> 	O_in,
-			Rout					=>		O_out,
-			clk 					=> 	clk,
+			Rin					=> 	    O_in,
+			Rout				=>		O_out,
+			clk 				=> 	    clk,
 			output		 		=>  	O,
-			reset					=>		reset
+			reset				=>		reset
         );
 
 END Structural;
