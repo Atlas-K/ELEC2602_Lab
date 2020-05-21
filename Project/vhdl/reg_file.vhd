@@ -35,7 +35,7 @@ entity reg_file is
         reg0sel: in std_logic_vector(ADDR_SIZE - 1 downto 0); -- 2bit address
         reg1sel: in std_logic_vector(ADDR_SIZE - 1 downto 0); -- 2bit address
         mode: in std_logic;                                   -- 0/1
-        rw_mode: i std_logic;                                 -- 0/1
+        rw_mode: in std_logic;                                 -- 0/1
         input: in std_logic_vector(DATA_SIZE - 1 downto 0);   -- input data port for external input mode
         output: out std_logic_vector(DATA_SIZE - 1 downto 0)  -- output data port for external output mode
     );
