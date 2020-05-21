@@ -7,7 +7,7 @@ use STD.textio.all;
 
 ENTITY InstructionRegister IS
   PORT(
-    		incr_clk : IN STD_LOGIC; -- flip state when you want to incrament (0 -> 1 or 1-> 0 will incrament)
+    		incr_clk : IN STD_LOGIC; 
     		instruction : OUT STD_LOGIC_VECTOR(34 DOWNTO 0) --- <3 bit op code> <16 bit add1> <16 bit add 2>
     );
   
