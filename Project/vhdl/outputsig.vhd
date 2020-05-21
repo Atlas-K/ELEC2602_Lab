@@ -72,7 +72,7 @@ ARCHITECTURE behavioural of outputsig is
 						mode <= '1'; 
 						rw_mode <= '1'; 
 						pc_in <= 1;
-					when "1110" => --End state
+					when "1111" => --End state
 						
 						;		
 					--(TODO): Implement FLOOR as part of ALU?
