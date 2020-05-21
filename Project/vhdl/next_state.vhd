@@ -5,7 +5,7 @@ ENTITY next_state is
 	port (	--I don't think that any of this useful except for state, f1f0, reset, next_state. I will update this in the end.
 	
 				state: IN std_logic_vector(3 downto 0); 		--Current State.
-				f1f0:	 IN std_LOGIC_VECTOR(2 downto 0);		--The operation to be performed (Add, Move, XOR, etc).
+				f1f0:	 IN std_LOGIC_VECTOR(2 downto 0);		--The operation to be performed (Add, Move, XOR, etc) given by OPCODE.
 				reg0:	 IN std_LOGIC_VECTOR( downto );			--The first register
 				reg1:	 IN std_LOGIC_VECTOR( downto );			--The second register
 				reset: IN std_logic;									--Everyone is familiar with this devil.
@@ -31,19 +31,21 @@ begin
 					next_state <= "0011";
 				elsif (state = "0011") then							--Path: PC Instruction to Instruction Register -> Instruction Register Instruction to Decoder
 					next_state <= "0101";
-				elsif (state = "0101" and f1f0 = "001") then		--Path: Instruction Register Instruction to Decoder -> load_or_move
+				elsif (state = "0101" and f1f0 = "000") then		--Path: Instruction Register Instruction to Decoder -> Kill Clock?? (Termination OPCODE)
+					next_state <= "1110"
+				elsif (state = "0101" and f1f0 = "010") then		--Path: Instruction Register Instruction to Decoder -> load_or_move (move only)
 					next_state <= "0111";
-				elsif (state = "0101" and f1f0 = "000") then		--Path: Instruction Register Instruction to Decoder -> load
+				elsif (state = "0101" and f1f0 = "001") then		--Path: Instruction Register Instruction to Decoder -> load
 					next_state <= "0110";
 				elsif (state = "0110") then							--Path: load -> load_or_move
 					next_state <= "0111";
 				elsif (state = "0111") then							--Path: load_or_move -> PC Instruction to instruction register & PC increments by 1
 					next_state <= "0100"									
-				elsif (state = "0101" and f1f0 = "100") then		--Path: Instruction Register Instruction to Decoder -> add_or_xor (add only)
+				elsif (state = "0101" and f1f0 = "011") then		--Path: Instruction Register Instruction to Decoder -> add_or_xor (add only)
 					next_state <= "1000";
 				elsif (state = "0101" and f1f0 = "101") then		--Path: Instruction Register Instruction to Decoder -> add_or_xor (xor only)
 					next_state <= "1000";
-				elsif (state = "1000" and f1f0 = "100") then		--Path: add_or_xor (add only) -> add1
+				elsif (state = "1000" and f1f0 = "011") then		--Path: add_or_xor (add only) -> add1
 					next_state <= "1001";
 				elsif (state = "1000" and f1f0 = "101") then		--Path: add_or_xor (xor only) -> xor1
 					next_state <= "1010";
@@ -63,9 +65,8 @@ begin
 					next_state <= "0011";
 				elsif (state = "0100") then							--Path: PC Instruction to instruction register & PC increments by 1 -> Instruction Register Instruction to Decoder
 					next_state <= "0101";
-							
 				else
-					next_state <= "";										--We will see what this needs to be.
+					next_state <= "1111";								--Terminate the code.
 				end if;
 		end process;
 END behavioural;
