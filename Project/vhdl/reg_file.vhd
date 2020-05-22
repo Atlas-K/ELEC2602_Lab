@@ -64,12 +64,12 @@ begin
 					write_reg := conv_integer(reg0sel);
 					reg_bus(write_reg) <= input;
 					output <= (others => 'Z');
+
+				elsif rw_mode = '1' then
+					read_reg := conv_integer(reg0sel);
+					output <= reg_bus(read_reg);
 				end if;
 			end if;
-
-        elsif rw_mode = '1' then
-                read_reg := conv_integer(reg0sel);
-                output <= reg_bus(read_reg);
-        end if;
+		end if;
 	end process;
 end Behavior;

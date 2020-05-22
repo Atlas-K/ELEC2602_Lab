@@ -64,12 +64,11 @@ BEGIN
 	process (cnt)
 	begin  
 		case cnt is 
-			when 0		=> 	reg0sel <= "000", reg1sel <= "001", mode <= '0', rw_mode <= '1', input <= "0000000000000000";
-			when 1		=> 	reg0sel <= "000", reg1sel <= "001", mode <= '0', rw_mode <= '1', input <= "0000000000000000";
-			when 2		=> 	reg0sel <= "000", reg1sel <= "001", mode <= '0', rw_mode <= '1', input <= "0000000000000000";
-			
-			when 3		=> 	reg0sel <= "000", reg1sel <= "001", mode <= '0', rw_mode <= '1', input <= "0000000000000000";
-			when 4		=> 	reg0sel <= "000", reg1sel <= "001", mode <= '0', rw_mode <= '1', input <= "0000000000000000";
+			when 0		=> 	reg0sel <= "000"; reg1sel <= "000"; mode <= '1'; rw_mode <= '0'; input <= "0000000000000001";
+			when 1		=> 	reg0sel <= "001"; reg1sel <= "001"; mode <= '1'; rw_mode <= '0'; input <= "0000000000000010";
+			when 2		=> 	reg0sel <= "000"; reg1sel <= "001"; mode <= '0'; rw_mode <= '0';
+			when 3		=> 	reg0sel <= "000"; reg1sel <= "000"; mode <= '1'; rw_mode <= '1';
+			when others => 	reg0sel <= "100"; reg1sel <= "101"; mode <= '1'; rw_mode <= '0'; input <= "1100000001100000";
 
 		end case;
 	end process;
