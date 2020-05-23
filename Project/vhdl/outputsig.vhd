@@ -18,6 +18,7 @@ ENTITY outputsig is
 				to_A_SET_in_ALU2			 :OUT std_LOGIC;									--Connect in FSM with A_SET of ALU2
 				to_B_in_ALU2				 :OUT std_LOGIC_VECTOR (15 downto 0);		--Connect in FSM with B of ALU2
 				to_TRIGGER_in_ALU2		 :OUT std_LOGIc;									--Connect in FSM with TRIGGER of ALU2
+				to_incr_clk_in_instruction_register : OUT std_LOGIC;					--Connect in FSM with incr_clk of Instruction Register.
 				
 				
 			);
@@ -59,13 +60,15 @@ signal	temp_output_C_from_ALU2 (15 downto 0);
 						temp_arg2_from_decoder <= output_arg2_from_decoder;				--arg2 from decoder has been temporarily stored (because we cannot assign input to output directly).
 						to_reg1sel_in_reg_file <= temp_arg2_from_decoder;					--arg2 has now been assigned to the reg1sel of reg_file
 						to_mode_in_reg_file <= '0'; 	
-						to_rw_mode_in_reg_file <= '0';											--As Moses stated, this can be either 0 or 1 for MOVE, it doesn't matter.	
+						to_rw_mode_in_reg_file <= '0';											--As Moses stated, this can be either 0 or 1 for MOVE, it doesn't matter.
+						to_incr_clk_in_instruction_register <= '1'							--This tells the instruction register that the task has been done.
 					when "1110" =>	--During load1
 						temp_arg1_from_decoder <= output_arg1_from_decoder;				--arg1 from decoder has been temporarily stored (because we cannot assign input to output directly).
 						to_reg0sel_in_reg_file <= temp_arg1_from_decoder;					--arg1 has now been assigned to the reg0sel of reg_file as this is the location where we will load.
 						to_reg1sel_in_reg_file <= "111";											--This is the register where we had loaded the value. Now, we will use it to Move to R[x].
 						to_mode_in_reg_file <= '0'; 	
 						to_rw_mode_in_reg_file <= '0';											--As Moses stated, this can be either 0 or 1 for MOVE, it doesn't matter.
+						to_incr_clk_in_instruction_register <= '1'							--This tells the instruction register that the task has been done.
 					when "1000" => --During add_or_xor_sub
 						temp_arg1_from_decoder <= output_arg1_from_decoder;				--arg1 from decoder has been temporarily stored (because we cannot assign input to output directly).
 						to_reg0sel_in_reg_file <= temp_arg1_from_decoder;					--arg1 has now been assigned to the reg0sel of reg_file
@@ -92,6 +95,7 @@ signal	temp_output_C_from_ALU2 (15 downto 0);
 						to_reg0sel_in_reg_file <= temp_arg1_from_decoder;					--arg1 has now been assigned to the reg0sel of reg_file
 						to_mode_in_reg_file <= '1'; 	
 						to_rw_mode_in_reg_file <= '0'; 											--Now reg_file goes into Load mode and changes R[x] to => R[x] <opcode> R[y]
+						to_incr_clk_in_instruction_register <= '1'							--This tells the instruction register that the task has been done.
 					when "1100" => --During ldpc, see/change
 						reg0sel <= R_x; 
 						mode <= '1'; 
