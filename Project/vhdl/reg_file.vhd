@@ -39,6 +39,8 @@ entity reg_file is
         mode: in std_logic;                                   -- 0/1
         rw_mode: in std_logic;                                 -- 0/1
         input: in std_logic_vector(DATA_SIZE - 1 downto 0);   -- input data port for external input mode
+	input_for_ldpc: in std_logic_vector(DATA_SIZE - 1 downto 0);-- input data port for external input mode for ldpc
+	op_code: in std_logic(2 downto 0);		   -- This is only going to be used for ldpc
         output: out std_logic_vector(DATA_SIZE - 1 downto 0)  -- output data port for external output mode
     );
 
@@ -63,6 +65,9 @@ begin
 				if rw_mode = '0' then
 					write_reg := conv_integer(reg0sel);
 					reg_bus(write_reg) <= input;
+					--for ldpc
+					if (op_code = "110") then		--So, if ldpc is called for, only then this takes place.
+						reg_bus(write_reg) <= input_for_ldpc;
 					output <= (others => 'Z');
 
 				elsif rw_mode = '1' then
