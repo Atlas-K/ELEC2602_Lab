@@ -32,20 +32,25 @@ ARCHITECTURE behavioural of FSM is
     COMPONENT outputsig
         PORT (
             state: 	IN std_logic_vector (3 downto 0);
-            output_op_code_from_decoder : IN std_LOGIC_VECTOR (2 downto 0);		--This is the output op-code from the decoder (connect in FSM with decoder)
+            output_op_code_from_decoder : IN std_LOGIC_VECTOR (2 downto 0);	--This is the output op-code from the decoder (connect in FSM with decoder)
             output_arg1_from_decoder : IN std_logic_vector (15 downto 0);		--This is the output arg1 from the decoder (connect in FSM with decoder)
             output_arg2_from_decoder : IN std_logic_vector (15 downto 0);		--This is the output arg2 from the decoder (connect in FSM with decoder)
             output_output_from_reg_file : IN std_LOGIC_VECTOR (15 downto 0);  --This is the output output from the reg_file (connect in FSM with reg_file)
             output_C_from_ALU2		 : IN std_LOGIC_VECTOR (15 downto 0);		--This is the output C from the ALU2 (connect in FSM with ALU2)
-            to_reg0sel_in_reg_file 	 :OUT std_LOGIC_VECTOR (2 downto 0); 		--Connect in FSM with reg0sel of reg_file
-            to_reg1sel_in_reg_file 	 :OUT std_LOGIC_VECTOR (2 downto 0); 		--Connect in FSM with reg1sel of reg_file
+            output_pc_counter_from_instruction_register: IN std_LOGIC_VECTOR (15 downto 0);	--This is the output pc_counter from the instruction register (to be made) (connect in FSM with instruction register)
+            output_instruction_from_instruction_from_register; IN std_LOGIC_VECTOR (34 downto 0);--This is the output Instruction from the Instruction Register (connect in FSM with decoder)
+            to_reg0sel_in_reg_file 	 :OUT std_LOGIC_VECTOR (15 downto 0); 		--Connect in FSM with reg0sel of reg_file (!!!need to change vector in original file)
+            to_reg1sel_in_reg_file 	 :OUT std_LOGIC_VECTOR (15 downto 0); 		--Connect in FSM with reg1sel of reg_file (!!!need to change vector in original file)
+            to_input_in_reg_file		 :OUT std_LOGIC_VECTOR (15 downto 0);		--Connect in FSM with input of reg_file
             to_mode_in_reg_file 	 	 :OUT std_logic; 									--Connect in FSM with mode of reg_file
             to_rw_mode_in_reg_file	 :OUT std_LOGIC; 									--Connect in FSM with rw_mode of reg_file
             to_A_in_ALU2				 :OUT std_LOGIC_VECTOR (15 downto 0);		--Connect in FSM with A of ALU2
             to_A_SET_in_ALU2			 :OUT std_LOGIC;									--Connect in FSM with A_SET of ALU2
             to_B_in_ALU2				 :OUT std_LOGIC_VECTOR (15 downto 0);		--Connect in FSM with B of ALU2
             to_TRIGGER_in_ALU2		 :OUT std_LOGIc;									--Connect in FSM with TRIGGER of ALU2
-            to_incr_clk_in_instruction_register : OUT std_LOGIC					--Connect in FSM with incr_clk of Instruction Register.
+            to_incr_clk_in_instruction_register : OUT std_LOGIC;					--Connect in FSM with incr_clk of Instruction Register
+            to_pc_in_in_instruction_register: OUT std_LOGIC_VECTOR (15 downto 0);--Connect in FSM with pc_in of Instruction Register (to be made)
+            to_instruction_in_decoder : OUT std_LOGIC_VECTOR (34 downto 0)	--Connect in FSM with instruction of decoder.
             );
     END COMPONENT;
 
@@ -72,8 +77,8 @@ ARCHITECTURE behavioural of FSM is
     COMPONENT reg_file
         PORT (
             clk: in std_logic;
-            reg0sel: in std_logic_vector(2 downto 0); -- 2bit address
-            reg1sel: in std_logic_vector(2 downto 0); -- 2bit address
+            reg0sel: in std_logic_vector(15 downto 0); -- TODO: change length in reg_file
+            reg1sel: in std_logic_vector(15 downto 0); -- TODO: change length in reg_file
             mode: in std_logic;                                   -- 0/1
             rw_mode: in std_logic;                                 -- 0/1
             input: in std_logic_vector(15 downto 0);   -- input data port for external input mode
@@ -84,16 +89,21 @@ ARCHITECTURE behavioural of FSM is
     COMPONENT InstructionRegister
         PORT (
             incr_clk : IN STD_LOGIC; 
-    		instruction : OUT STD_LOGIC_VECTOR(34 DOWNTO 0) --- <3 bit op code> <16 bit add1> <16 bit add 2>
+    		instruction : OUT STD_LOGIC_VECTOR(34 DOWNTO 0); --- <3 bit op code> <16 bit add1> <16 bit add 2>
+            pc_counter : OUT STD_LOGIC_VECTOR(15 DOWNTO 0); -- TODO: implement in InstructionRegister
+            pc_in : IN STD_LOGIC_VECTOR(34 DOWNTO 0) -- TODO: implement in InstructionRegister
         );
     END COMPONENT;
 
     -------------DECLARE SIGNALS--------------
     -- InstructionRegister signals
     signal inst_reg_incr_clk: STD_LOGIC;
-    signal instruction: STD_LOGIC_VECTOR(34 downto 0);
+    signal instruction_from_instruction_reg: STD_LOGIC_VECTOR(34 downto 0);
+    signal pc_counter: STD_LOGIC_VECTOR(15 downto 0);
+    signal pc_in: STD_LOGIC_VECTOR(15 downto 0);
 
-    -- Decoder signals (+ instruction)
+    -- Decoder signals
+    signal instruction_in_decoder: STD_LOGIC_VECTOR(34 downto 0);
     signal op_code: STD_LOGIC_VECTOR(2 downto 0);
     signal arg1: STD_LOGIC_VECTOR(15 downto 0);
     signal arg2: STD_LOGIC_VECTOR(15 downto 0);
@@ -110,8 +120,8 @@ ARCHITECTURE behavioural of FSM is
     signal alu_c: STD_LOGIC_VECTOR(15 downto 0);
 
     -- reg_file signals
-    signal reg_1 : STD_LOGIC_VECTOR(2 downto 0);
-    signal reg_2 : STD_LOGIC_VECTOR(2 downto 0);
+    signal reg_1 : STD_LOGIC_VECTOR(15 downto 0);
+    signal reg_2 : STD_LOGIC_VECTOR(15 downto 0);
     signal reg_mode: STD_LOGIC;
     signal rw_mode: STD_LOGIC;
     signal reg_input_dataport: STD_LOGIC_VECTOR(15 downto 0);
@@ -122,9 +132,9 @@ ARCHITECTURE behavioural of FSM is
     -------------REROUTING--------------
     BEGIN
 
-    INST_REG: InstructionRegister PORT MAP(inst_reg_incr_clk, instruction); --Registers the instruction
+    INST_REG: InstructionRegister PORT MAP(inst_reg_incr_clk, instruction_from_instruction_reg, pc_counter, pc_in); --Registers the instruction
     
-    DECODER0: Decoder PORT MAP(instruction, op_code, arg1, arg2); --Decodes the instruction (splits it up to op_code, arg1, arg2)
+    DECODER0: Decoder PORT MAP(instruction_in_decoder, op_code, arg1, arg2); --Decodes the instruction (splits it up to op_code, arg1, arg2)
 
     NEXT_STATE0: next_state PORT MAP(current_state, op_code, reset, next_state); --Based on the current state, get the next state
     current_state <= next_state; --move to next
@@ -133,7 +143,27 @@ ARCHITECTURE behavioural of FSM is
 
     REG_FILE0: reg_file PORT MAP(clk, reg_1, reg_2, reg_mode, rw_mode, reg_input_dataport, reg_output_dataport); 
 
-    OUTPUT_SIG: outputsig PORT MAP(current_state, op_code, arg1, arg2, reg_output_dataport, alu_c, reg_1, reg_2, reg_mode, rw_mode, alu_a, alu_a_set, alu_b, alu_trigger, inst_reg_incr_clk); --Process the state and wire up output signals to ALU and reg_file
+    OUTPUT_SIG: outputsig PORT MAP(
+        current_state, 
+        op_code, 
+        arg1, 
+        arg2, 
+        reg_output_dataport, 
+        alu_c, 
+        pc_counter,
+        instruction_from_instruction_reg,
+        reg_1, 
+        reg_2, 
+        reg_input_dataport,
+        reg_mode, 
+        rw_mode, 
+        alu_a, 
+        alu_a_set, 
+        alu_b, 
+        alu_trigger, 
+        inst_reg_incr_clk,
+        pc_in,
+        instruction_in_decoder); --Process the state and wire up output signals to ALU and reg_file
 
 
     --RAM0: RAM PORT MAP();
