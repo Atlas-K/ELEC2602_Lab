@@ -36,25 +36,27 @@ ARCHITECTURE behavioral OF InstructionRegister IS
                                    
 BEGIN
   -- load instructions 
-  instructions(0) <= "000000000";
-  instructions(1) <= "000000000";
-  instructions(2) <= "000000000";
-  instructions(3) <= "000000000";
-  instructions(4) <= TERMINATED_INSTRUCTION;
+  --876543210--
+  instructions(0) <= "001000100"; -- LOAD R0 4 (100)
+  instructions(1) <= "010001000"; -- MOV R1 R0 -> R0 = R1 = 4
+  instructions(2) <= "011000001"; -- ADD R0 R1 -> R0 = 8, R1 = 4
+  instructions(3) <= "100000001"; -- SUB R0 R1 -> R0 = 4, R1 = 4
 --3 bit op, 3bit addr1, 3bit addr2
   
   -- when incrament changes state, execute 
 	PROCESS(incr_clk,branch)
 		BEGIN 
-		if current_instruction_internal /= TERMINATED_INSTRUCTION AND rising_edge(incr_clk) then
 			if branch /= '1' then
 				if program_counter /= NUM_INSTRUCTIONS + 1 then 
 					program_counter <= program_counter + 1;
 				end if; 
 			else
 				program_counter <= conv_integer(pc_in);
+
 			end if;
-		end if;
+		
+
+	
 	END PROCESS;	
 	
 	current_instruction_internal <= instructions(program_counter);
@@ -62,7 +64,6 @@ BEGIN
 					 
 	-- return instruction 
 	instruction <= current_instruction_internal;
-	
 END behavioral;
 
   

@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/atlas/Desktop/ELEC2602/Lab/reg_test/simulation/modelsim
+Ereg_file
+Z1 w1590564979
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R0
+Z6 8C:/Users/atlas/Desktop/ELEC2602/Lab/reg_test/../Project/vhdl/reg_file.vhd
+Z7 FC:/Users/atlas/Desktop/ELEC2602/Lab/reg_test/../Project/vhdl/reg_file.vhd
+l0
+L30
+V<QBjOJNTfH;2JjPB2CglV3
+!s100 ?9VKW7WOC3Ez2J0m7dI@?0
+Z8 OV;C;10.5b;63
+31
+Z9 !s110 1590570440
+!i10b 1
+Z10 !s108 1590570440.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/reg_test/../Project/vhdl/reg_file.vhd|
+Z12 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/reg_test/../Project/vhdl/reg_file.vhd|
+!i113 1
+Z13 o-93 -work work
+Z14 tExplicit 1 CvgOpt 0
+Abehavior
+R2
+R3
+R4
+R5
+Z15 DEx4 work 8 reg_file 0 22 <QBjOJNTfH;2JjPB2CglV3
+l50
+L47
+Z16 VMiUFSElk1BOHaIO^cYiQV1
+Z17 !s100 =m:8oon_FO@?XUOS]C1BV0
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Ereg_test
+Z18 w1590570388
+R5
+R2
+R3
+R4
+R0
+Z19 8C:/Users/atlas/Desktop/ELEC2602/Lab/reg_test/../Project/vhdl/reg_test.vhd
+Z20 FC:/Users/atlas/Desktop/ELEC2602/Lab/reg_test/../Project/vhdl/reg_test.vhd
+l0
+L8
+V_2_LdgMIR_;2J1BV?JF<M2
+!s100 Z?^dcaV@KY]1DfO4R0_;D1
+R8
+31
+R9
+!i10b 1
+R10
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/reg_test/../Project/vhdl/reg_test.vhd|
+Z22 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/reg_test/../Project/vhdl/reg_test.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R5
+R2
+R3
+R4
+DEx4 work 8 reg_test 0 22 _2_LdgMIR_;2J1BV?JF<M2
+l36
+L11
+V8YSVHmjK^7CMY>iHfDif03
+!s100 =KB[@mb7;4bbI7a_3@:jO2
+R8
+31
+R9
+!i10b 1
+R10
+R21
+R22
+!i113 1
+R13
+R14

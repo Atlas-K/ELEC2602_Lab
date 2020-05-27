@@ -17,8 +17,8 @@ ARCHITECTURE behavior OF reg_test IS
 			reg1sel: in std_logic_vector(2 downto 0); -- 2bit address
 			mode: in std_logic;                                   -- 0/1
 			rw_mode: in std_logic;                                 -- 0/1
-			input: in std_logic_vector(15 downto 0);   -- input data port for external input mode
-			output: out std_logic_vector(15 downto 0) 
+			input: in std_logic_vector(2 downto 0);   -- input data port for external input mode
+			output: out std_logic_vector(2 downto 0) 
 			); 
 	END COMPONENT;
 
@@ -30,8 +30,8 @@ ARCHITECTURE behavior OF reg_test IS
 	signal clk_in  : STD_LOGIC:= '0';
 	signal mode, rw_mode  : STD_LOGIC;
 	signal reg0sel, reg1sel : STD_LOGIC_VECTOR(2 downto 0);
-	signal input : STD_LOGIC_VECTOR(15 downto 0);
-	signal output : STD_LOGIC_VECTOR(15 downto 0);
+	signal input : STD_LOGIC_VECTOR(2 downto 0);
+	signal output : STD_LOGIC_VECTOR(2 downto 0);
 	
 BEGIN
 	
@@ -64,11 +64,11 @@ BEGIN
 	process (cnt)
 	begin  
 		case cnt is 
-			when 0		=> 	reg0sel <= "000"; reg1sel <= "000"; mode <= '1'; rw_mode <= '0'; input <= "0000000000000001";
-			when 1		=> 	reg0sel <= "001"; reg1sel <= "001"; mode <= '1'; rw_mode <= '0'; input <= "0000000000000010";
+			when 0		=> 	reg0sel <= "000"; reg1sel <= "000"; mode <= '1'; rw_mode <= '0'; input <= "001";
+			when 1		=> 	reg0sel <= "001"; reg1sel <= "001"; mode <= '1'; rw_mode <= '0'; input <= "010";
 			when 2		=> 	reg0sel <= "000"; reg1sel <= "001"; mode <= '0'; rw_mode <= '0';
 			when 3		=> 	reg0sel <= "000"; reg1sel <= "000"; mode <= '1'; rw_mode <= '1';
-			when others => 	reg0sel <= "100"; reg1sel <= "101"; mode <= '1'; rw_mode <= '0'; input <= "1100000001100000";
+			when others => 	reg0sel <= "100"; reg1sel <= "101"; mode <= '1'; rw_mode <= '0'; input <= "000";
 
 		end case;
 	end process;

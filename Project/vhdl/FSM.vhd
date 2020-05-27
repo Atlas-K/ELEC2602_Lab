@@ -24,7 +24,8 @@ ARCHITECTURE behavioural of FSM is
         PORT (
             state: IN std_logic_vector(3 downto 0); 		--Current State.
             f1f0:  IN std_LOGIC_VECTOR(2 downto 0);		    --The operation to be performed (Add, Move, XOR, etc).
-            reset: IN std_logic;							--Everyone is familiar with this devil.
+            clk: IN std_logic;			--Everyone is familiar with this devil.
+			reset: IN std_logic;
             next_state : OUT std_logic_vector(3 downto 0)   --The next state that will be output
         );
     END COMPONENT;
@@ -140,7 +141,7 @@ ARCHITECTURE behavioural of FSM is
     
     DECODER0: Decoder PORT MAP(instruction_in_decoder, op_code, arg1, arg2); --Decodes the instruction (splits it up to op_code, arg1, arg2)
 
-    NEXT_STATE0: next_state PORT MAP(current_state, op_code, reset, next_state_sig); --Based on the current state, get the next state
+    NEXT_STATE0: next_state PORT MAP(current_state, op_code,clk,reset, next_state_sig); --Based on the current state, get the next state
     current_state <= next_state_sig; --move to next
    
    ALU0: ALU PORT MAP(alu_a, alu_b, alu_a_set, alu_trigger, op_code, alu_c);

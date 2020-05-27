@@ -1,0 +1,46 @@
+|reg_file
+clk => reg_bus~6.CLK
+clk => reg_bus~0.CLK
+clk => reg_bus~1.CLK
+clk => reg_bus~2.CLK
+clk => reg_bus~3.CLK
+clk => reg_bus~4.CLK
+clk => reg_bus~5.CLK
+clk => output[0]~reg0.CLK
+clk => output[0]~en.CLK
+clk => output[1]~reg0.CLK
+clk => output[1]~en.CLK
+clk => output[2]~reg0.CLK
+clk => output[2]~en.CLK
+clk => reg_bus.CLK0
+reg0sel[0] => reg_bus.raddr_a[0].DATAA
+reg0sel[0] => reg_bus~2.DATAIN
+reg0sel[0] => reg_bus.WADDR
+reg0sel[1] => reg_bus.raddr_a[1].DATAA
+reg0sel[1] => reg_bus~1.DATAIN
+reg0sel[1] => reg_bus.WADDR1
+reg0sel[2] => reg_bus.raddr_a[2].DATAA
+reg0sel[2] => reg_bus~0.DATAIN
+reg0sel[2] => reg_bus.WADDR2
+reg1sel[0] => reg_bus.raddr_a[0].DATAB
+reg1sel[1] => reg_bus.raddr_a[1].DATAB
+reg1sel[2] => reg_bus.raddr_a[2].DATAB
+mode => reg_bus.OUTPUTSELECT
+mode => output[0].IN0
+mode => reg_bus.OUTPUTSELECT
+mode => reg_bus.OUTPUTSELECT
+mode => reg_bus.OUTPUTSELECT
+mode => reg_bus.OUTPUTSELECT
+mode => reg_bus.raddr_a[2].OUTPUTSELECT
+mode => reg_bus.raddr_a[1].OUTPUTSELECT
+mode => reg_bus.raddr_a[0].OUTPUTSELECT
+rw_mode => output[0].IN1
+rw_mode => reg_bus.DATAB
+input[0] => reg_bus.DATAA
+input[1] => reg_bus.DATAA
+input[2] => reg_bus.DATAA
+output[0] <= output[0].DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output[1].DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= output[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
