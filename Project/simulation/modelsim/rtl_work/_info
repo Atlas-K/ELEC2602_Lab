@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/atlas/Desktop/ELEC2602/Lab/Project/simulation/modelsim
 Ealu
-Z1 w1590587707
+Z1 w1590587781
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z4 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
@@ -24,9 +24,9 @@ V@d6SNP]2]^iU^Q0j>^e5I2
 !s100 4hmR6nkOHRCdb<HUJTS7<1
 Z9 OV;C;10.5b;63
 31
-Z10 !s110 1590587727
+Z10 !s110 1590589972
 !i10b 1
-Z11 !s108 1590587727.000000
+Z11 !s108 1590589972.000000
 Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/ALU.vhdl|
 Z13 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/ALU.vhdl|
 !i113 1
@@ -41,8 +41,8 @@ R6
 DEx4 work 3 alu 0 22 @d6SNP]2]^iU^Q0j>^e5I2
 l23
 L19
-V0kiVN`4U4BJ5bBH>>:_FH2
-!s100 _J^HfZNLJ<8L3Mi[RRg2Q2
+VLaO@D9;MG0?`Z=XGV_65_3
+!s100 L]oog_W8;ilgWP0Lz4F@<2
 R9
 31
 R10
@@ -69,11 +69,11 @@ VmSP5=fWBecMM[LUbUC?oS0
 !s100 UWe92X98O_`:NS6iKEY@<1
 R9
 31
-R10
+Z19 !s110 1590589973
 !i10b 1
-R11
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/decoder.vhdl|
-Z20 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/decoder.vhdl|
+Z20 !s108 1590589973.000000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/decoder.vhdl|
+Z22 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/decoder.vhdl|
 !i113 1
 R14
 R15
@@ -90,32 +90,32 @@ VgH8cPKF:M=BoKC5CW24z63
 !s100 TT_iLaV;[WF3Ml8WAHSDN1
 R9
 31
-R10
-!i10b 1
-R11
 R19
+!i10b 1
 R20
+R21
+R22
 !i113 1
 R14
 R15
 Efsm
-Z21 w1590575763
+Z23 w1590575763
 R5
 R6
 R0
-Z22 8C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd
-Z23 FC:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd
+Z24 8C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd
+Z25 FC:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd
 l0
 L4
 Vj@RZUDW6A_Be6ficJ<6Q03
 !s100 lT<2D1ATjdfZ;G?6A3l412
 R9
 31
-R10
+R19
 !i10b 1
-R11
-Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd|
-Z25 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd|
+R20
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd|
+Z27 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd|
 !i113 1
 R14
 R15
@@ -129,35 +129,35 @@ VPXZ`GXgM3OkFKKY:F_o8@1
 !s100 N3nT9;fTdTP<DLI]nllYV3
 R9
 31
-R10
+R19
 !i10b 1
-R11
-R24
-R25
+R20
+R26
+R27
 !i113 1
 R14
 R15
 Einstructionregister
-Z26 w1590587488
+Z28 w1590588904
 R2
 R3
 R4
 R5
 R6
 R0
-Z27 8C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd
-Z28 FC:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd
+Z29 8C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd
+Z30 FC:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd
 l0
 L8
 Vz9<R<3f1h5_?dmb<C=^6Z1
 !s100 Z:e>J`3LToEOa5e2j[mzU1
 R9
 31
-R10
+R19
 !i10b 1
-R11
-Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd|
-Z30 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd|
+R20
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd|
+Z32 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd|
 !i113 1
 R14
 R15
@@ -170,36 +170,36 @@ R6
 DEx4 work 19 instructionregister 0 22 z9<R<3f1h5_?dmb<C=^6Z1
 l37
 L18
-V1V3nf?GRkF3Ub^>Ge2J>_1
-!s100 Ei5DU7@<<Y2Ha<:zV5okG1
+V@BW3C^JZ_Cd`XL<PZh<ZA2
+!s100 B>1ng^cZ;dXbLmR9i84@L3
 R9
 31
-R10
+R19
 !i10b 1
-R11
-R29
-R30
+R20
+R31
+R32
 !i113 1
 R14
 R15
 Enext_state
-Z31 w1590584139
+Z33 w1590584139
 R5
 R6
 R0
-Z32 8C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/next_state.vhd
-Z33 FC:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/next_state.vhd
+Z34 8C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/next_state.vhd
+Z35 FC:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/next_state.vhd
 l0
 L4
 VZ6SaX=`<T7bIHo4U;EhjY0
 !s100 ?3EYG2dQiFDNXWV2;<=?^0
 R9
 31
-R10
+R19
 !i10b 1
-R11
-Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/next_state.vhd|
-Z35 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/next_state.vhd|
+R20
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/next_state.vhd|
+Z37 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/next_state.vhd|
 !i113 1
 R14
 R15
@@ -213,32 +213,32 @@ VoINdOF]9F9_cAGolRjQWm1
 !s100 ]8MS9]Ij@R3b8W`hGoaV22
 R9
 31
-R10
+R19
 !i10b 1
-R11
-R34
-R35
+R20
+R36
+R37
 !i113 1
 R14
 R15
 Eoutputsig
-Z36 w1590585703
+Z38 w1590589928
 R5
 R6
 R0
-Z37 8C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd
-Z38 FC:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd
+Z39 8C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd
+Z40 FC:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd
 l0
 L4
 Vb`SHD=4AnX`C]hlTVLDcT1
 !s100 544ADTc;j^oGO@HMLJ84G2
 R9
 31
-R10
+R19
 !i10b 1
-R11
-Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd|
-Z40 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd|
+R20
+Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd|
+Z42 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd|
 !i113 1
 R14
 R15
@@ -248,38 +248,38 @@ R6
 DEx4 work 9 outputsig 0 22 b`SHD=4AnX`C]hlTVLDcT1
 l44
 L33
-V>lWm5B4d@9GDO:5VfEAHd2
-!s100 ]mFa]g_DUL8[:AIPch0Em0
+V;m<LR>Fh^XiUfc<H>@ZeU0
+!s100 k6z5jTjB;aAGB[d7RCGWX1
 R9
 31
-R10
+R19
 !i10b 1
-R11
-R39
-R40
+R20
+R41
+R42
 !i113 1
 R14
 R15
 Ereg_file
-Z41 w1590564979
+Z43 w1590564979
 R4
 R5
 R6
 R3
 R0
-Z42 8C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/reg_file.vhd
-Z43 FC:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/reg_file.vhd
+Z44 8C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/reg_file.vhd
+Z45 FC:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/reg_file.vhd
 l0
 L30
 V<QBjOJNTfH;2JjPB2CglV3
 !s100 ?9VKW7WOC3Ez2J0m7dI@?0
 R9
 31
-R10
+R19
 !i10b 1
-R11
-Z44 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/reg_file.vhd|
-Z45 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/reg_file.vhd|
+R20
+Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/reg_file.vhd|
+Z47 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/reg_file.vhd|
 !i113 1
 R14
 R15
@@ -288,39 +288,39 @@ R4
 R5
 R6
 R3
-Z46 DEx4 work 8 reg_file 0 22 <QBjOJNTfH;2JjPB2CglV3
+Z48 DEx4 work 8 reg_file 0 22 <QBjOJNTfH;2JjPB2CglV3
 l50
 L47
-Z47 VMiUFSElk1BOHaIO^cYiQV1
-Z48 !s100 =m:8oon_FO@?XUOS]C1BV0
+Z49 VMiUFSElk1BOHaIO^cYiQV1
+Z50 !s100 =m:8oon_FO@?XUOS]C1BV0
 R9
 31
-R10
+R19
 !i10b 1
-R11
-R44
-R45
+R20
+R46
+R47
 !i113 1
 R14
 R15
 Etestbench_project
-Z49 w1590575025
+Z51 w1590575025
 R3
 R4
 R5
 R6
 R0
-Z50 8C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/testbench_project.vhd
-Z51 FC:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/testbench_project.vhd
+Z52 8C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/testbench_project.vhd
+Z53 FC:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/testbench_project.vhd
 l0
 L7
 VH9f3l3a1?nL2TD[4i14ch3
 !s100 Uci[cAVSVL[C`R8Y1e6SS1
 R9
 31
-Z52 !s110 1590587726
+R10
 !i10b 1
-Z53 !s108 1590587726.000000
+R11
 Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/testbench_project.vhd|
 Z55 !s107 C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/testbench_project.vhd|
 !i113 1
@@ -338,9 +338,9 @@ VY?>BzK:eNn4iez^ZW1dM83
 !s100 O;T[>X4UXQOmL3U<zN[5O2
 R9
 31
-R52
+R10
 !i10b 1
-R53
+R11
 R54
 R55
 !i113 1

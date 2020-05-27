@@ -18,7 +18,7 @@ END;
 ARCHITECTURE behavioral OF InstructionRegister IS
   
   -- globals 
-   signal NUM_INSTRUCTIONS : integer := 4;
+   signal NUM_INSTRUCTIONS : integer := 5;
 	signal INSTRUCTION_SIZE : integer := 9;
    signal TERMINATED_INSTRUCTION :  STD_LOGIC_VECTOR(INSTRUCTION_SIZE - 1 DOWNTO 0) := "111111111";
 
@@ -37,10 +37,11 @@ ARCHITECTURE behavioral OF InstructionRegister IS
 BEGIN
   -- load instructions 
   --876543210--
-  instructions(0) <= "001000001"; -- LOAD R0 3 (100)
-  instructions(1) <= "010001000"; -- MOV R1 R0 -> R0 = R1 = 3
-  instructions(2) <= "011000001"; -- ADD R0 R1 -> R0 = 6, R1 = 3
-  instructions(3) <= "100000001"; -- SUB R0 R1 -> R0 = 3, R1 = 3
+  instructions(0) <= "001000001"; -- LOAD R0 1
+  instructions(1) <= "001001010"; -- LOAD R1 2
+  instructions(2) <= "011000001"; -- ADD R0 R1 -> R0 = 3, R1 = 2
+  instructions(3) <= "100000001"; -- SUB R0 R1 -> R0 = 1, R1 = 2
+  instructions(4) <= "101000001"; -- XOR R0 R1 -> R0 = 3, R1 = 2
 --3 bit op, 3bit addr1, 3bit addr2
   
   -- when incrament changes state, execute 
