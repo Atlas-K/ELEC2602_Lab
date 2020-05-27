@@ -46,8 +46,7 @@ ARCHITECTURE behavioural of outputsig is
 			begin
 				case state is
 					when "0000" => to_incr_clk_in_instruction_register <= '0';
-						--
-					when "0001" => --During store instructions
+						
 						--
 					when "0010" => --During PC load instruction 0
 						--
@@ -83,26 +82,34 @@ ARCHITECTURE behavioural of outputsig is
 						to_rw_mode_in_reg_file <= '0';											--As Moses stated, this can be either 0 or 1 for MOVE, it doesn't matter.
 						to_incr_clk_in_instruction_register <= '1';						--This tells the instruction register that the task has been done.
 					
-					when "1000" => --During add_or_xor_sub
+					
+					when "0001" => 
 						to_reg0sel_in_reg_file <= output_arg1_from_decoder;				--arg1 from decoder has been temporarily stored (because we cannot assign input to output directly).
 											--arg1 has now been assigned to the reg0sel of reg_file
 						to_mode_in_reg_file <= '1'; 	
 						to_rw_mode_in_reg_file <= '1';
-						to_A_in_ALU2 <= output_output_from_reg_file;--This temporarily stores the output from the reg_file.
+						to_A_SET_in_ALU2 <= '0';
+						
+						
+					when "1000" => --During add_or_xor_sub
+						--This temporarily stores the output from the reg_file.
 										 --This sends the output of reg_file to the A input of ALU2.
-						to_A_SET_in_ALU2 <= '1';													--This allows the ALU2 to accept the value of A being sent by the reg_file
-					
-					when "1001" => --During add_or_xor_sub1
-						to_reg0sel_in_reg_file <= output_arg2_from_decoder;				--arg2 from decoder has been temporarily stored (because we cannot assign input to output directly).
+						to_reg1sel_in_reg_file <= output_arg2_from_decoder;				--arg2 from decoder has been temporarily stored (because we cannot assign input to output directly).
 											--arg2 has now been assigned to the reg0sel of reg_file
 						to_mode_in_reg_file <= '1'; 	
 						to_rw_mode_in_reg_file <= '1';
-						to_B_in_ALU2 <= output_output_from_reg_file;--This temporarily stores the output from the reg_file.
+						to_A_in_ALU2 <= output_output_from_reg_file;													--This allows the ALU2 to accept the value of A being sent by the reg_file
+					
+					
+					when "1001" => --During add_or_xor_sub1
+						--This temporarily stores the output from the reg_file.
 							 --This sends the output of reg_file to the B input of ALU2.
 						to_OP_in_ALU2 <= output_op_code_from_decoder;--This temporarily stores the op_code from the decoder
 									--This sends the op_code to the ALU2 so that it knows what operation to perform on A & B.
-						to_TRIGGER_in_ALU2 <= '1';													--This allows the ALU2 to accept the value of B being sent by the reg_file and start the operation.
-																										--What about the C output of the ALU2? Won't we like to see what the result is? Ans: We will store it.
+						to_TRIGGER_in_ALU2 <= '1';
+						to_A_SET_in_ALU2 <= '1';
+												--This allows the ALU2 to accept the value of B being sent by the reg_file and start the operation.
+						to_B_in_ALU2 <= output_output_from_reg_file;																				--What about the C output of the ALU2? Won't we like to see what the result is? Ans: We will store it.
 					when "1011" => --During add_or_xor_sub2
 						to_input_in_reg_file <= output_C_from_ALU2;						--This  temporarily stores the output C from the ALU2.
 										--This sends the output C of ALU2 to the "input" of reg_file (to be loaded on Rx).

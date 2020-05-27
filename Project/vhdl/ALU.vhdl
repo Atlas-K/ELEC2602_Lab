@@ -2,6 +2,7 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
 
 ENTITY ALU IS 
   PORT (
@@ -21,20 +22,20 @@ ENTITY ALU IS
     signal A_REG : STD_LOGIC_VECTOR(2 DOWNTO 0) := "000";
 	BEGIN
     -- set A Register on rising clock edge 
-    PROCESS(A_SET) 
-	 BEGIN
-      IF (rising_edge(A_Set))
-      THEN
-        A_Reg <= A;
-      END IF;
-    END PROCESS;
+    ---PROCESS(A_SET) 
+	 --BEGIN
+      ---IF (rising_edge(A_SET))
+      --THEN
+        A_REG <= A;
+--      END IF;
+--    END PROCESS;
         
     -- ALU OPS
     PROCESS(TRIGGER)
 	 BEGIN
         IF (rising_edge(TRIGGER))
         THEN
-          CASE OP IS 
+          CASE OP IS
             WHEN "011" => -- ADD 
             	C <= A_REG + B;
             WHEN "100" => -- SUB

@@ -37,10 +37,10 @@ ARCHITECTURE behavioral OF InstructionRegister IS
 BEGIN
   -- load instructions 
   --876543210--
-  instructions(0) <= "001000100"; -- LOAD R0 4 (100)
-  instructions(1) <= "010001000"; -- MOV R1 R0 -> R0 = R1 = 4
-  instructions(2) <= "011000001"; -- ADD R0 R1 -> R0 = 8, R1 = 4
-  instructions(3) <= "100000001"; -- SUB R0 R1 -> R0 = 4, R1 = 4
+  instructions(0) <= "001000001"; -- LOAD R0 3 (100)
+  instructions(1) <= "010001000"; -- MOV R1 R0 -> R0 = R1 = 3
+  instructions(2) <= "011000001"; -- ADD R0 R1 -> R0 = 6, R1 = 3
+  instructions(3) <= "100000001"; -- SUB R0 R1 -> R0 = 3, R1 = 3
 --3 bit op, 3bit addr1, 3bit addr2
   
   -- when incrament changes state, execute 

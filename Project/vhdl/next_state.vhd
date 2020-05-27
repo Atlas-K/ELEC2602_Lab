@@ -21,11 +21,11 @@ begin
 		if (clk='1' and clk'event) then --If statements are used here instead of "case" as the events are not mutually exclusive. Check this website for mutually exclusive: https://electronics.stackexchange.com/questions/73387/difference-between-if-else-and-case-statement-in-vhdl
 				if (reset = '1') then
 					next_state <= "0000";
-				elsif (state = "0000") then							--Path: Start -> Store Instruction
-					next_state <= "0001";
-				elsif (state = "0001") then							--Path: Store Instruction -> PC Load Instruction 0
+				elsif (state = "0000") then
 					next_state <= "0010";
-				elsif (state = "0010") then							--Path: PC Load Instruction 0 -> PC Instruction to Instruction Register
+				elsif (state = "0001") then							--Path: Start -> Store Instruction
+					next_state <= "1000";
+				elsif (state = "0010") then							--Path: Store Instruction -> PC Load Instruction 0
 					next_state <= "0011";
 				elsif (state = "0011") then							--Path: PC Instruction to Instruction Register -> Instruction Register Instruction to Decoder
 					next_state <= "0101";
@@ -42,11 +42,11 @@ begin
 				elsif (state = "0111") then							--Path: move (move only) -> PC Instruction to instruction register & PC increments by 1
 					next_state <= "0000";
 				elsif (state = "0101" and f1f0 = "011") then		--Path: Instruction Register Instruction to Decoder -> add_or_xor_sub (add only)
-					next_state <= "1000";
+					next_state <= "0001";
 				elsif (state = "0101" and f1f0 = "101") then		--Path: Instruction Register Instruction to Decoder -> add_or_xor_sub (xor only)
-					next_state <= "1000";
+					next_state <= "0001";
 				elsif (state = "0101" and f1f0 = "100") then		--Path: Instruction Register Instruction to Decoder -> add_or_xor_sub (sub only)
-					next_state <= "1000";
+					next_state <= "0001";
 				elsif (state = "1000") then							--Path: add_or_xor_sub (any) -> add_or_xor_sub1 (any)
 					next_state <= "1001";
 				elsif (state = "1001") then							--Path: add_or_xor_sub1 (any) -> add_or_xor_sub2 (any)
