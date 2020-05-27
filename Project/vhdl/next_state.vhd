@@ -19,7 +19,7 @@ begin
 				
 		begin
 		--If statements are used here instead of "case" as the events are not mutually exclusive. Check this website for mutually exclusive: https://electronics.stackexchange.com/questions/73387/difference-between-if-else-and-case-statement-in-vhdl
-				if (reset = 1) then							
+				if (reset = '1') then							
 					next_state <= "0000";
 				elsif (state = "0000") then							--Path: Start -> Store Instruction
 					next_state <= "0001";
@@ -30,7 +30,7 @@ begin
 				elsif (state = "0011") then							--Path: PC Instruction to Instruction Register -> Instruction Register Instruction to Decoder
 					next_state <= "0101";
 				elsif (state = "0101" and f1f0 = "000") then		--Path: Instruction Register Instruction to Decoder -> Kill Clock?? (Termination OPCODE)
-					next_state <= "1110"
+					next_state <= "1111";
 				elsif (state = "0101" and f1f0 = "010") then		--Path: Instruction Register Instruction to Decoder -> move (move only)
 					next_state <= "0111";
 				elsif (state = "0101" and f1f0 = "001") then		--Path: Instruction Register Instruction to Decoder -> load
@@ -50,7 +50,7 @@ begin
 				elsif (state = "1000") then							--Path: add_or_xor_sub (any) -> add_or_xor_sub1 (any)
 					next_state <= "1001";
 				elsif (state = "1001") then							--Path: add_or_xor_sub1 (any) -> add_or_xor_sub2 (any)
-					next_state <= "1011"
+					next_state <= "1011";
 				elsif (state = "1011") then							--Path: add_or_xor2 (any) -> PC Instruction to instruction register & PC increments by 1
 					next_state <= "0100";
 				elsif (state = "0101" and f1f0 = "010") then		--Path: Instruction Register Instruction to Decoder -> ldpc
@@ -64,7 +64,7 @@ begin
 				elsif (state = "0100") then							--Path: PC Instruction to instruction register & PC increments by 1 -> Instruction Register Instruction to Decoder
 					next_state <= "0101";
 				else
-					next_state <= "1111";								--Terminate the code.
+					next_state <= "1111";								--?? Terminate the code. This shouldn't be the case if we want to do multiple operations, no? Go back to start, then?
 				end if;
 		end process;
 END behavioural;
