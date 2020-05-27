@@ -1,5 +1,5 @@
 Analysis & Elaboration report for project
-Wed May 27 20:47:53 2020
+Wed May 27 21:13:47 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed May 27 20:47:53 2020       ;
+; Analysis & Elaboration Status ; Successful - Wed May 27 21:13:47 2020       ;
 ; Quartus Prime Version         ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                 ; project                                     ;
 ; Top-level Entity Name         ; FSM                                         ;
@@ -183,7 +183,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Wed May 27 20:47:44 2020
+    Info: Processing started: Wed May 27 21:13:37 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project -c project --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -217,44 +217,7 @@ Warning (10036): Verilog HDL or VHDL warning at FSM.vhd(122): object "to_OP_in_A
 Info (12128): Elaborating entity "InstructionRegister" for hierarchy "InstructionRegister:INST_REG" File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd Line: 140
 Warning (10540): VHDL Signal Declaration warning at InstructionRegister.vhd(21): used explicit default value for signal "NUM_INSTRUCTIONS" because signal was never assigned a value File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 21
 Warning (10540): VHDL Signal Declaration warning at InstructionRegister.vhd(22): used explicit default value for signal "INSTRUCTION_SIZE" because signal was never assigned a value File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 22
-Warning (10492): VHDL Process Statement warning at InstructionRegister.vhd(50): signal "program_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 50
-Warning (10492): VHDL Process Statement warning at InstructionRegister.vhd(50): signal "NUM_INSTRUCTIONS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 50
-Warning (10492): VHDL Process Statement warning at InstructionRegister.vhd(51): signal "program_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 51
-Warning (10492): VHDL Process Statement warning at InstructionRegister.vhd(54): signal "pc_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 54
-Warning (10631): VHDL Process Statement warning at InstructionRegister.vhd(47): inferring latch(es) for signal or variable "program_counter", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
 Warning (10873): Using initial value X (don't care) for net "instructions[4]" at InstructionRegister.vhd(32) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 32
-Info (10041): Inferred latch for "program_counter[0]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[1]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[2]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[3]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[4]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[5]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[6]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[7]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[8]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[9]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[10]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[11]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[12]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[13]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[14]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[15]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[16]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[17]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[18]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[19]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[20]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[21]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[22]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[23]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[24]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[25]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[26]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[27]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[28]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[29]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[30]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
-Info (10041): Inferred latch for "program_counter[31]" at InstructionRegister.vhd(47) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 47
 Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:DECODER0" File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd Line: 142
 Info (12128): Elaborating entity "next_state" for hierarchy "next_state:NEXT_STATE0" File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd Line: 144
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU0" File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd Line: 147
@@ -276,13 +239,13 @@ Warning (10492): VHDL Process Statement warning at outputsig.vhd(116): signal "o
 Warning (10492): VHDL Process Statement warning at outputsig.vhd(118): signal "output_pc_counter_from_instruction_register" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 118
 Warning (10492): VHDL Process Statement warning at outputsig.vhd(124): signal "output_arg1_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 124
 Warning (10492): VHDL Process Statement warning at outputsig.vhd(128): signal "output_output_from_reg_file" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 128
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_incr_clk_in_instruction_register", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_instruction_in_decoder", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_reg0sel_in_reg_file", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_mode_in_reg_file", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_rw_mode_in_reg_file", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_input_in_reg_file", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_reg1sel_in_reg_file", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
-Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_incr_clk_in_instruction_register", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_A_in_ALU2", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_A_SET_in_ALU2", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_B_in_ALU2", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
@@ -305,7 +268,6 @@ Info (10041): Inferred latch for "to_A_SET_in_ALU2" at outputsig.vhd(45) File: C
 Info (10041): Inferred latch for "to_A_in_ALU2[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Info (10041): Inferred latch for "to_A_in_ALU2[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Info (10041): Inferred latch for "to_A_in_ALU2[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
-Info (10041): Inferred latch for "to_incr_clk_in_instruction_register" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Info (10041): Inferred latch for "to_reg1sel_in_reg_file[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Info (10041): Inferred latch for "to_reg1sel_in_reg_file[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Info (10041): Inferred latch for "to_reg1sel_in_reg_file[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
@@ -326,10 +288,11 @@ Info (10041): Inferred latch for "to_instruction_in_decoder[5]" at outputsig.vhd
 Info (10041): Inferred latch for "to_instruction_in_decoder[6]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Info (10041): Inferred latch for "to_instruction_in_decoder[7]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
 Info (10041): Inferred latch for "to_instruction_in_decoder[8]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 41 warnings
+Info (10041): Inferred latch for "to_incr_clk_in_instruction_register" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 36 warnings
     Info: Peak virtual memory: 4859 megabytes
-    Info: Processing ended: Wed May 27 20:47:53 2020
-    Info: Elapsed time: 00:00:09
+    Info: Processing ended: Wed May 27 21:13:47 2020
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:21
 
 

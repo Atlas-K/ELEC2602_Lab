@@ -46,6 +46,7 @@ BEGIN
   -- when incrament changes state, execute 
 	PROCESS(incr_clk,branch)
 		BEGIN 
+		if incr_clk'event and incr_clk = '1' then
 			if branch /= '1' then
 				if program_counter /= NUM_INSTRUCTIONS + 1 then 
 					program_counter <= program_counter + 1;
@@ -54,6 +55,7 @@ BEGIN
 				program_counter <= conv_integer(pc_in);
 
 			end if;
+		end if;
 		
 
 	

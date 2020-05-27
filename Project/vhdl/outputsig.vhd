@@ -45,7 +45,7 @@ ARCHITECTURE behavioural of outputsig is
 			process(state)
 			begin
 				case state is
-					when "0000" => --During reset
+					when "0000" => to_incr_clk_in_instruction_register <= '0';
 						--
 					when "0001" => --During store instructions
 						--
@@ -144,7 +144,7 @@ ARCHITECTURE behavioural of outputsig is
 					
 					--when "" =>  <= ; <= ; <= ; <= ; <= ;
 					
-					when others =>  to_branch_in_instruction_register <= '1'; to_mode_in_reg_file <= '1';
+					when others =>  to_branch_in_instruction_register <= '0'; to_mode_in_reg_file <= '1';
 				end case;
 			end process;
 	END behavioural;

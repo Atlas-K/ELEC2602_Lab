@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/ALU.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:48:00 on May 27,2020
+# Start time: 21:13:53 on May 27,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/ALU.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -21,11 +21,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity ALU
 # -- Compiling architecture behavioural of ALU
-# End time: 20:48:00 on May 27,2020, Elapsed time: 0:00:00
+# End time: 21:13:53 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/decoder.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:48:00 on May 27,2020
+# Start time: 21:13:53 on May 27,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/decoder.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -35,11 +35,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Decoder
 # -- Compiling architecture behavioural of Decoder
-# End time: 20:48:00 on May 27,2020, Elapsed time: 0:00:00
+# End time: 21:13:54 on May 27,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:48:00 on May 27,2020
+# Start time: 21:13:54 on May 27,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -54,11 +54,11 @@
 # ** Warning: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd(26): (vcom-1013) Subtype of "ieee.std_logic_1164.STD_LOGIC_VECTOR" depends on value of signal "INSTRUCTION_SIZE".
 # ** Warning: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd(26): (vcom-1013) Subtype of "ieee.std_logic_1164.STD_LOGIC_VECTOR" depends on value of signal "INSTRUCTION_SIZE".
 # ** Warning: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd(29): (vcom-1013) Type "InstructionMemory" depends on value of signal "NUM_INSTRUCTIONS".
-# End time: 20:48:00 on May 27,2020, Elapsed time: 0:00:00
+# End time: 21:13:54 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 5
 # vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/reg_file.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:48:00 on May 27,2020
+# Start time: 21:13:54 on May 27,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/reg_file.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -67,45 +67,45 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity reg_file
 # -- Compiling architecture Behavior of reg_file
-# End time: 20:48:00 on May 27,2020, Elapsed time: 0:00:00
+# End time: 21:13:54 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:48:00 on May 27,2020
+# Start time: 21:13:54 on May 27,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity outputsig
 # -- Compiling architecture behavioural of outputsig
-# End time: 20:48:00 on May 27,2020, Elapsed time: 0:00:00
+# End time: 21:13:54 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/next_state.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:48:00 on May 27,2020
+# Start time: 21:13:54 on May 27,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/next_state.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity next_state
 # -- Compiling architecture behavioural of next_state
-# End time: 20:48:00 on May 27,2020, Elapsed time: 0:00:00
+# End time: 21:13:54 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:48:00 on May 27,2020
+# Start time: 21:13:54 on May 27,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FSM
 # -- Compiling architecture behavioural of FSM
-# End time: 20:48:00 on May 27,2020, Elapsed time: 0:00:00
+# End time: 21:13:54 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/testbench_project.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:48:00 on May 27,2020
+# Start time: 21:13:54 on May 27,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/testbench_project.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -115,11 +115,11 @@
 # -- Compiling entity testbench_project
 # -- Compiling architecture behavior of testbench_project
 # ** Warning: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/testbench_project.vhd(38): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 20:48:01 on May 27,2020, Elapsed time: 0:00:01
+# End time: 21:13:54 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/ALU.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:48:01 on May 27,2020
+# Start time: 21:13:54 on May 27,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/ALU.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -128,11 +128,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity ALU
 # -- Compiling architecture behavioural of ALU
-# End time: 20:48:01 on May 27,2020, Elapsed time: 0:00:00
+# End time: 21:13:54 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/decoder.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:48:01 on May 27,2020
+# Start time: 21:13:54 on May 27,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/decoder.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -142,22 +142,22 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Decoder
 # -- Compiling architecture behavioural of Decoder
-# End time: 20:48:01 on May 27,2020, Elapsed time: 0:00:00
+# End time: 21:13:54 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:48:01 on May 27,2020
+# Start time: 21:13:54 on May 27,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FSM
 # -- Compiling architecture behavioural of FSM
-# End time: 20:48:01 on May 27,2020, Elapsed time: 0:00:00
+# End time: 21:13:55 on May 27,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:48:01 on May 27,2020
+# Start time: 21:13:55 on May 27,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -172,33 +172,33 @@
 # ** Warning: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd(26): (vcom-1013) Subtype of "ieee.std_logic_1164.STD_LOGIC_VECTOR" depends on value of signal "INSTRUCTION_SIZE".
 # ** Warning: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd(26): (vcom-1013) Subtype of "ieee.std_logic_1164.STD_LOGIC_VECTOR" depends on value of signal "INSTRUCTION_SIZE".
 # ** Warning: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd(29): (vcom-1013) Type "InstructionMemory" depends on value of signal "NUM_INSTRUCTIONS".
-# End time: 20:48:01 on May 27,2020, Elapsed time: 0:00:00
+# End time: 21:13:55 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 5
 # vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/next_state.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:48:01 on May 27,2020
+# Start time: 21:13:55 on May 27,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/next_state.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity next_state
 # -- Compiling architecture behavioural of next_state
-# End time: 20:48:01 on May 27,2020, Elapsed time: 0:00:00
+# End time: 21:13:55 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:48:01 on May 27,2020
+# Start time: 21:13:55 on May 27,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity outputsig
 # -- Compiling architecture behavioural of outputsig
-# End time: 20:48:01 on May 27,2020, Elapsed time: 0:00:00
+# End time: 21:13:55 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/reg_file.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:48:01 on May 27,2020
+# Start time: 21:13:55 on May 27,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/reg_file.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -207,12 +207,12 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity reg_file
 # -- Compiling architecture Behavior of reg_file
-# End time: 20:48:01 on May 27,2020, Elapsed time: 0:00:00
+# End time: 21:13:55 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_project
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench_project 
-# Start time: 20:48:01 on May 27,2020
+# Start time: 21:13:55 on May 27,2020
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -234,20 +234,19 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 200 ns
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /testbench_project/a/INST_REG
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 0 ps  Iteration: 1  Instance: /testbench_project/a/INST_REG
+add wave -position end  sim:/testbench_project/a/INST_REG/branch
+add wave -position end  sim:/testbench_project/a/OUTPUT_SIG/to_branch_in_instruction_register
+restart
+run 20000ns
+add wave -position end sim:/testbench_project/a/INST_REG/*
+restart
+run 20000ns
 add wave -position end  sim:/testbench_project/a/REG_FILE0/reg_bus
 restart
 run 20000ns
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /testbench_project/a/INST_REG
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 0 ps  Iteration: 1  Instance: /testbench_project/a/INST_REG
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 650 ns  Iteration: 4  Instance: /testbench_project/a/INST_REG
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 650 ns  Iteration: 4  Instance: /testbench_project/a/INST_REG
-# End time: 20:48:26 on May 27,2020, Elapsed time: 0:00:25
-# Errors: 0, Warnings: 6
+add wave -position end sim:/testbench_project/a/ALU0/*
+restart
+run 1000ns
+run 20000ns
+# End time: 21:17:57 on May 27,2020, Elapsed time: 0:04:02
+# Errors: 0, Warnings: 0
