@@ -29,7 +29,7 @@ USE ieee.std_logic_1164.ALL;
 
 entity reg_file is
    generic(ADDR_SIZE: integer := 3;  -- 8 regs
-           DATA_SIZE: integer := 16 -- 16 bit data
+           DATA_SIZE: integer := 3 -- 16 bit data
            );
    
     port(

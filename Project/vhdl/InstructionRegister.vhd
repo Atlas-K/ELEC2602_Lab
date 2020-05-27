@@ -7,8 +7,9 @@ use STD.textio.all;
 
 ENTITY InstructionRegister IS
   PORT(
-    		incr_clk : IN STD_LOGIC; 
-    		instruction : OUT STD_LOGIC_VECTOR(34 DOWNTO 0) --- <3 bit op code> <16 bit add1> <16 bit add 2>
+    		incr_clk, branch : IN STD_LOGIC; 
+    		instruction : OUT STD_LOGIC_VECTOR(8 DOWNTO 0); --- <3 bit op code> <16 bit add1> <16 bit add 2>
+			pc_in: IN STD_LOGIC_Vector(2 downto 0)
     );
   
 	
@@ -18,11 +19,11 @@ ARCHITECTURE behavioral OF InstructionRegister IS
   
   -- globals 
    signal NUM_INSTRUCTIONS : integer := 4;
-	signal INSTRUCTION_SIZE : integer := 35;
-   signal TERMINATED_INSTRUCTION :  STD_LOGIC_VECTOR(INSTRUCTION_SIZE - 1 DOWNTO 0) := "11111111111111111111111111111111111";
+	signal INSTRUCTION_SIZE : integer := 9;
+   signal TERMINATED_INSTRUCTION :  STD_LOGIC_VECTOR(INSTRUCTION_SIZE - 1 DOWNTO 0) := "111111111";
 
 	-- internal signals 
-	signal current_instruction_internal : STD_LOGIC_VECTOR(INSTRUCTION_SIZE - 1 DOWNTO 0) := "00000000000000000000000000000000000";
+	signal current_instruction_internal : STD_LOGIC_VECTOR(INSTRUCTION_SIZE - 1 DOWNTO 0) := "000000000";
   
 	-- type defs 
 	type InstructionMemory is array(NUM_INSTRUCTIONS DOWNTO 0) of STD_LOGIC_VECTOR(INSTRUCTION_SIZE -1 DOWNTO 0);
@@ -35,23 +36,24 @@ ARCHITECTURE behavioral OF InstructionRegister IS
                                    
 BEGIN
   -- load instructions 
-  instructions(0) <= "00000000000000000000000000000000000";
-  instructions(1) <= "00000000000000000000000000000000001";
-  instructions(2) <= "00000000000000000000000000000000010";
-  instructions(3) <= "00000000000000000000000000000000011";
+  instructions(0) <= "000000000";
+  instructions(1) <= "000000000";
+  instructions(2) <= "000000000";
+  instructions(3) <= "000000000";
   instructions(4) <= TERMINATED_INSTRUCTION;
-
+--3 bit op, 3bit addr1, 3bit addr2
   
   -- when incrament changes state, execute 
-	PROCESS(incr_clk)
+	PROCESS(incr_clk,branch)
 		BEGIN 
-		if current_instruction_internal /= TERMINATED_INSTRUCTION AND rising_edge(incr_clk)
-		then
-			if program_counter /= NUM_INSTRUCTIONS + 1
-			then 
-				 program_counter <= program_counter + 1;
-			end if; 
-		
+		if current_instruction_internal /= TERMINATED_INSTRUCTION AND rising_edge(incr_clk) then
+			if branch /= '1' then
+				if program_counter /= NUM_INSTRUCTIONS + 1 then 
+					program_counter <= program_counter + 1;
+				end if; 
+			else
+				program_counter <= conv_integer(pc_in);
+			end if;
 		end if;
 	END PROCESS;	
 	

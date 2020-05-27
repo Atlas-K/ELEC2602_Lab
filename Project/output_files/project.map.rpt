@@ -1,0 +1,347 @@
+Analysis & Elaboration report for project
+Wed May 27 17:15:09 2020
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: reg_file:REG_FILE0
+  5. Analysis & Elaboration Settings
+  6. Port Connectivity Checks: "outputsig:OUTPUT_SIG"
+  7. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Wed May 27 17:15:09 2020       ;
+; Quartus Prime Version         ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                 ; project                                     ;
+; Top-level Entity Name         ; FSM                                         ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg_file:REG_FILE0 ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; ADDR_SIZE      ; 3     ; Signed Integer                         ;
+; DATA_SIZE      ; 3     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; FSM                ; project            ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "outputsig:OUTPUT_SIG"                                                                        ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; to_op_in_alu2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Wed May 27 17:14:59 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project -c project --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/alu.vhdl
+    Info (12022): Found design unit 1: ALU-behavioural File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/ALU.vhdl Line: 18
+    Info (12023): Found entity 1: ALU File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/ALU.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/decoder.vhdl
+    Info (12022): Found design unit 1: Decoder-behavioural File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/decoder.vhdl Line: 17
+    Info (12023): Found entity 1: Decoder File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/decoder.vhdl Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/instructionregister.vhd
+    Info (12022): Found design unit 1: InstructionRegister-behavioral File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 18
+    Info (12023): Found entity 1: InstructionRegister File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/reg_file.vhd
+    Info (12022): Found design unit 1: reg_file-Behavior File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/reg_file.vhd Line: 47
+    Info (12023): Found entity 1: reg_file File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/reg_file.vhd Line: 30
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/outputsig.vhd
+    Info (12022): Found design unit 1: outputsig-behavioural File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 33
+    Info (12023): Found entity 1: outputsig File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/next_state.vhd
+    Info (12022): Found design unit 1: next_state-behavioural File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/next_state.vhd Line: 14
+    Info (12023): Found entity 1: next_state File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/next_state.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/fsm.vhd
+    Info (12022): Found design unit 1: FSM-behavioural File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd Line: 10
+    Info (12023): Found entity 1: FSM File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd Line: 4
+Info (12127): Elaborating entity "FSM" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at FSM.vhd(105): used implicit default value for signal "pc_counter" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd Line: 105
+Warning (10036): Verilog HDL or VHDL warning at FSM.vhd(121): object "to_OP_in_ALU2" assigned a value but never read File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd Line: 121
+Info (12128): Elaborating entity "InstructionRegister" for hierarchy "InstructionRegister:INST_REG" File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd Line: 139
+Warning (10540): VHDL Signal Declaration warning at InstructionRegister.vhd(21): used explicit default value for signal "NUM_INSTRUCTIONS" because signal was never assigned a value File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 21
+Warning (10540): VHDL Signal Declaration warning at InstructionRegister.vhd(22): used explicit default value for signal "INSTRUCTION_SIZE" because signal was never assigned a value File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 22
+Warning (10540): VHDL Signal Declaration warning at InstructionRegister.vhd(23): used explicit default value for signal "TERMINATED_INSTRUCTION" because signal was never assigned a value File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at InstructionRegister.vhd(49): signal "current_instruction_internal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 49
+Warning (10492): VHDL Process Statement warning at InstructionRegister.vhd(49): signal "TERMINATED_INSTRUCTION" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/InstructionRegister.vhd Line: 49
+Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:DECODER0" File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd Line: 141
+Info (12128): Elaborating entity "next_state" for hierarchy "next_state:NEXT_STATE0" File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd Line: 143
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU0" File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd Line: 146
+Info (12128): Elaborating entity "reg_file" for hierarchy "reg_file:REG_FILE0" File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd Line: 148
+Info (12128): Elaborating entity "outputsig" for hierarchy "outputsig:OUTPUT_SIG" File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/FSM.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(60): signal "output_instruction_from_instruction_from_register" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 60
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(61): signal "temp_instruction_from_instruction_register" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(66): signal "output_arg2_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 66
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(67): signal "temp_arg2_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(70): signal "output_arg1_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 70
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(71): signal "temp_arg1_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(72): signal "output_arg2_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 72
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(73): signal "temp_arg2_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 73
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(79): signal "output_arg1_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(80): signal "temp_arg1_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(87): signal "output_arg1_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 87
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(88): signal "temp_arg1_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(91): signal "output_output_from_reg_file" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(92): signal "temp_output_output_from_reg_file" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(96): signal "output_arg2_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(97): signal "temp_arg2_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 97
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(100): signal "output_output_from_reg_file" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(101): signal "temp_output_output_from_reg_file" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 101
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(102): signal "output_op_code_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(103): signal "temp_output_op_code_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 103
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(107): signal "output_C_from_ALU2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 107
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(108): signal "temp_output_C_from_ALU2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(109): signal "output_arg1_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 109
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(110): signal "temp_arg1_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 110
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(116): signal "output_arg1_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 116
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(117): signal "temp_arg1_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 117
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(118): signal "output_pc_counter_from_instruction_register" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 118
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(119): signal "temp_pc_counter_from_instruction_register" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 119
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(124): signal "output_arg1_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 124
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(125): signal "temp_arg1_from_decoder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 125
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(128): signal "output_output_from_reg_file" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 128
+Warning (10492): VHDL Process Statement warning at outputsig.vhd(129): signal "temp_output_output_from_reg_file" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 129
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "temp_instruction_from_instruction_register", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_instruction_in_decoder", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_reg0sel_in_reg_file", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_mode_in_reg_file", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_rw_mode_in_reg_file", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "temp_arg2_from_decoder", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_input_in_reg_file", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "temp_arg1_from_decoder", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_reg1sel_in_reg_file", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_incr_clk_in_instruction_register", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "temp_output_output_from_reg_file", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_A_in_ALU2", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_A_SET_in_ALU2", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_B_in_ALU2", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "temp_output_op_code_from_decoder", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_OP_in_ALU2", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_TRIGGER_in_ALU2", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "temp_output_C_from_ALU2", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "temp_pc_counter_from_instruction_register", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_pc_in_in_instruction_register", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Warning (10631): VHDL Process Statement warning at outputsig.vhd(45): inferring latch(es) for signal or variable "to_branch_in_instruction_register", which holds its previous value in one or more paths through the process File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_branch_in_instruction_register" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_pc_in_in_instruction_register[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_pc_in_in_instruction_register[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_pc_in_in_instruction_register[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_pc_counter_from_instruction_register[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_pc_counter_from_instruction_register[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_pc_counter_from_instruction_register[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_output_C_from_ALU2[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_output_C_from_ALU2[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_output_C_from_ALU2[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_TRIGGER_in_ALU2" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_OP_in_ALU2[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_OP_in_ALU2[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_OP_in_ALU2[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_output_op_code_from_decoder[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_output_op_code_from_decoder[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_output_op_code_from_decoder[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_B_in_ALU2[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_B_in_ALU2[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_B_in_ALU2[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_A_SET_in_ALU2" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_A_in_ALU2[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_A_in_ALU2[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_A_in_ALU2[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_output_output_from_reg_file[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_output_output_from_reg_file[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_output_output_from_reg_file[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_incr_clk_in_instruction_register" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_reg1sel_in_reg_file[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_reg1sel_in_reg_file[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_reg1sel_in_reg_file[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_arg1_from_decoder[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_arg1_from_decoder[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_arg1_from_decoder[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_input_in_reg_file[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_input_in_reg_file[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_input_in_reg_file[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_arg2_from_decoder[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_arg2_from_decoder[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_arg2_from_decoder[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_rw_mode_in_reg_file" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_mode_in_reg_file" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_reg0sel_in_reg_file[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_reg0sel_in_reg_file[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_reg0sel_in_reg_file[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_instruction_in_decoder[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_instruction_in_decoder[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_instruction_in_decoder[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_instruction_in_decoder[3]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_instruction_in_decoder[4]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_instruction_in_decoder[5]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_instruction_in_decoder[6]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_instruction_in_decoder[7]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "to_instruction_in_decoder[8]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_instruction_from_instruction_register[0]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_instruction_from_instruction_register[1]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_instruction_from_instruction_register[2]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_instruction_from_instruction_register[3]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_instruction_from_instruction_register[4]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_instruction_from_instruction_register[5]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_instruction_from_instruction_register[6]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_instruction_from_instruction_register[7]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info (10041): Inferred latch for "temp_instruction_from_instruction_register[8]" at outputsig.vhd(45) File: C:/Users/atlas/Desktop/ELEC2602/Lab/Project/vhdl/outputsig.vhd Line: 45
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 61 warnings
+    Info: Peak virtual memory: 4867 megabytes
+    Info: Processing ended: Wed May 27 17:15:09 2020
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:22
+
+
