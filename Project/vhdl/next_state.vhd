@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.all;
 
 ENTITY next_state is
 	port (	--I don't think that any of this useful except for state, f1f0, reset, next_state. I will update this in the end.
-	
+
 				state: IN std_logic_vector(3 downto 0); 		--Current State.
 				f1f0:	 IN std_LOGIC_VECTOR(2 downto 0);		--The operation to be performed (Add, Move, XOR, etc) given by OPCODE. (Connect this to op_code of decoder in FSM)
 				reset: IN std_logic;									--Everyone is familiar with this devil.
@@ -16,10 +16,10 @@ ARCHITECTURE behavioural of next_state is
 begin
 
 		process(state, f1f0,reset) is
-				
+
 		begin
 		--If statements are used here instead of "case" as the events are not mutually exclusive. Check this website for mutually exclusive: https://electronics.stackexchange.com/questions/73387/difference-between-if-else-and-case-statement-in-vhdl
-				if (reset = '1') then							
+				if (reset = '1') then
 					next_state <= "0000";
 				elsif (state = "0000") then							--Path: Start -> Store Instruction
 					next_state <= "0001";
@@ -30,7 +30,7 @@ begin
 				elsif (state = "0011") then							--Path: PC Instruction to Instruction Register -> Instruction Register Instruction to Decoder
 					next_state <= "0101";
 				elsif (state = "0101" and f1f0 = "000") then		--Path: Instruction Register Instruction to Decoder -> Kill Clock?? (Termination OPCODE)
-					next_state <= "1110";
+					next_state <= "1111";
 				elsif (state = "0101" and f1f0 = "010") then		--Path: Instruction Register Instruction to Decoder -> move (move only)
 					next_state <= "0111";
 				elsif (state = "0101" and f1f0 = "001") then		--Path: Instruction Register Instruction to Decoder -> load
@@ -40,7 +40,7 @@ begin
 				elsif (state = "1110") then							--Path: load1 -> PC Instruction to instruction register & PC increments by 1
 					next_state <= "0100";
 				elsif (state = "0111") then							--Path: move (move only) -> PC Instruction to instruction register & PC increments by 1
-					next_state <= "0100";									
+					next_state <= "0100";
 				elsif (state = "0101" and f1f0 = "011") then		--Path: Instruction Register Instruction to Decoder -> add_or_xor_sub (add only)
 					next_state <= "1000";
 				elsif (state = "0101" and f1f0 = "101") then		--Path: Instruction Register Instruction to Decoder -> add_or_xor_sub (xor only)
@@ -64,7 +64,7 @@ begin
 				elsif (state = "0100") then							--Path: PC Instruction to instruction register & PC increments by 1 -> Instruction Register Instruction to Decoder
 					next_state <= "0101";
 				else
-					next_state <= "1111";								--Terminate the code.
+					next_state <= "1111";								--?? Terminate the code. This shouldn't be the case if we want to do multiple operations, no? Go back to start, then?
 				end if;
 		end process;
 END behavioural;
