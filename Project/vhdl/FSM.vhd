@@ -93,8 +93,8 @@ ARCHITECTURE behavioural of FSM is
         PORT (
             incr_clk, branch : IN STD_LOGIC; 
     		instruction : OUT STD_LOGIC_VECTOR(8 DOWNTO 0); --- <3 bit op code> <16 bit add1> <16 bit add 2>
-            --pc_counter : OUT STD_LOGIC_VECTOR(2 DOWNTO 0); -- TODO: implement in InstructionRegister
-            pc_in : IN STD_LOGIC_VECTOR(2 DOWNTO 0) -- TODO: implement in InstructionRegister
+            pc_in : IN STD_LOGIC_VECTOR(2 DOWNTO 0); -- TODO: implement in InstructionRegister
+            pc_counter : OUT STD_LOGIC_VECTOR(2 DOWNTO 0) -- TODO: implement in InstructionRegister
         );
     END COMPONENT;
 
@@ -103,8 +103,8 @@ ARCHITECTURE behavioural of FSM is
     signal inst_reg_incr_clk: STD_LOGIC;
 	signal to_branch_in_instruction_register: STD_LOGIC;
     signal instruction_from_instruction_reg: STD_LOGIC_VECTOR(8 downto 0);
-    signal pc_counter: STD_LOGIC_VECTOR(2 downto 0);
     signal pc_in: STD_LOGIC_VECTOR(2 downto 0);
+    signal pc_counter: STD_LOGIC_VECTOR(2 downto 0);
 
     -- Decoder signals
     signal instruction_in_decoder: STD_LOGIC_VECTOR(8 downto 0);
@@ -137,7 +137,7 @@ ARCHITECTURE behavioural of FSM is
     -------------REROUTING--------------
     BEGIN
 
-    INST_REG: InstructionRegister PORT MAP(inst_reg_incr_clk, to_branch_in_instruction_register, instruction_from_instruction_reg, pc_in); --Registers the instruction
+    INST_REG: InstructionRegister PORT MAP(inst_reg_incr_clk, to_branch_in_instruction_register, instruction_from_instruction_reg, pc_in, pc_counter); --Registers the instruction
     
     DECODER0: Decoder PORT MAP(instruction_in_decoder, op_code, arg1, arg2); --Decodes the instruction (splits it up to op_code, arg1, arg2)
 

@@ -48,9 +48,10 @@ ARCHITECTURE behavioural of outputsig is
 					when "0000" => to_incr_clk_in_instruction_register <= '0';
 					to_TRIGGER_in_ALU2 <= '0';
 					to_A_SET_in_ALU2 <= '0';
+					to_branch_in_instruction_register <= '0';
 						
 						--
-					when "0010" => --During PC load instruction 0
+					
 						--
 					when "0011" => --During PC instruction to instruction register
 						--
@@ -134,11 +135,13 @@ ARCHITECTURE behavioural of outputsig is
 										--arg1 has now been assigned to the reg0sel of reg_file
 						to_mode_in_reg_file <= '1'; 	
 						to_rw_mode_in_reg_file <= '1';
-						to_pc_in_in_instruction_register <= output_output_from_reg_file;--"output" from reg_file has now been temporarily stored.
+						to_branch_in_instruction_register <= '1';
+						 --This tells the instruction register that the branch needs to be performed.
+					when "0010" => 
+				to_pc_in_in_instruction_register <= output_output_from_reg_file;--"output" from reg_file has now been temporarily stored.
  --"output" from reg_file has now been assigned to the pc_in of the Instruction Register
 						to_incr_clk_in_instruction_register <= '1';							--This tells the instruction register that the task has been done.
-						to_branch_in_instruction_register <= '1'; --This tells the instruction register that the branch needs to be performed.
-					--when "1111" =>;--Kill state		
+							
 					
 					--(TODO): Implement FLOOR as part of ALU?
 					--when "" =>  <= ; <= ; <= ; <= ; <= ; 			--These ones have been left blank as many other states are prone to change until the other components have been finalised.

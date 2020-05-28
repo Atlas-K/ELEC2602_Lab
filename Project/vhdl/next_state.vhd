@@ -22,11 +22,11 @@ begin
 				if (reset = '1') then
 					next_state <= "0000";
 				elsif (state = "0000") then
-					next_state <= "0010";
+					next_state <= "0011";
 				elsif (state = "0001") then							--Path: Start -> Store Instruction
 					next_state <= "1000";
 				elsif (state = "0010") then							--Path: Store Instruction -> PC Load Instruction 0
-					next_state <= "0011";
+					next_state <= "0000";
 				elsif (state = "0011") then							--Path: PC Instruction to Instruction Register -> Instruction Register Instruction to Decoder
 					next_state <= "0101";
 				elsif (state = "0101" and f1f0 = "000") then		--Path: Instruction Register Instruction to Decoder -> Kill Clock?? (Termination OPCODE)
@@ -60,7 +60,7 @@ begin
 				elsif (state = "0101" and f1f0 = "111") then		--Path: Instruction Register Instruction to Decoder -> branch
 					next_state <= "1101";
 				elsif (state = "1101") then							--Path: branch -> PC Instruction to instruction register
-					next_state <= "0000";
+					next_state <= "0010";
 				elsif (state = "0100") then							--Path: PC Instruction to instruction register & PC increments by 1 -> Instruction Register Instruction to Decoder
 					next_state <= "0101";
 				else

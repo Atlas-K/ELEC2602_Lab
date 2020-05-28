@@ -9,7 +9,8 @@ ENTITY InstructionRegister IS
   PORT(
     		incr_clk, branch : IN STD_LOGIC; 
     		instruction : OUT STD_LOGIC_VECTOR(8 DOWNTO 0); --- <3 bit op code> <16 bit add1> <16 bit add 2>
-			pc_in: IN STD_LOGIC_Vector(2 downto 0)
+			pc_in: IN STD_LOGIC_Vector(2 downto 0);
+			pc_counter: out STD_LOGIC_VECTOR(2 downto 0)
     );
   
 	
@@ -18,7 +19,7 @@ END;
 ARCHITECTURE behavioral OF InstructionRegister IS
   
   -- globals 
-   signal NUM_INSTRUCTIONS : integer := 5;
+   signal NUM_INSTRUCTIONS : integer := 7;
 	signal INSTRUCTION_SIZE : integer := 9;
    signal TERMINATED_INSTRUCTION :  STD_LOGIC_VECTOR(INSTRUCTION_SIZE - 1 DOWNTO 0) := "111111111";
 
@@ -42,6 +43,8 @@ BEGIN
   instructions(2) <= "011000001"; -- ADD R0 R1 -> R0 = 3, R1 = 2
   instructions(3) <= "100000001"; -- SUB R0 R1 -> R0 = 1, R1 = 2
   instructions(4) <= "101000001"; -- XOR R0 R1 -> R0 = 3, R1 = 2
+  instructions(5) <= "110010000"; -- LPDC R2
+  instructions(6) <= "111000000"; -- BRANCH R0
 --3 bit op, 3bit addr1, 3bit addr2
   
   -- when incrament changes state, execute 
@@ -63,7 +66,7 @@ BEGIN
 	END PROCESS;	
 	
 	current_instruction_internal <= instructions(program_counter);
-
+	pc_counter <= std_logic_vector(to_unsigned(program_counter,3));
 					 
 	-- return instruction 
 	instruction <= current_instruction_internal;
